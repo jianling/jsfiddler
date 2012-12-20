@@ -7,20 +7,6 @@
         <link rel="stylesheet" type="text/css" href="./assets/css/codemirror.css" />
         <script type="text/javascript" src="./assets/lib/sea.js"></script>
         <script type="text/javascript" src="http://fe.bdimg.com/tangram/2.0.1.2.js"></script>
-        <style type="text/css" id="J_style">
-            .CodeMirror {
-                font-family: "Inconsolata", "Monaco", "Consolas", "Andale Mono", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
-                line-height: 1.5;
-                position: relative;
-                overflow: hidden;
-            }
-            .CodeMirror {
-                font-family: "Inconsolata", "Monaco", "Consolas", "Andale Mono", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
-                line-height: 1.5;
-                position: relative;
-                overflow: hidden;
-            }
-        </style>
     </head>
     <body>
         <div class="hd">
@@ -104,7 +90,7 @@
                 </div>
             </div>
         </div>
-        <script type="text/javascript" id="J_script">
+        <script type="text/javascript">
             (function(){
                 seajs.config({
                     alias: {

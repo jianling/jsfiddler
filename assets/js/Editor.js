@@ -66,8 +66,44 @@ define(function(require, exports) {
             baidu('.editor-item').hide();
             baidu('#' + targetId).show();
         });
-    }
+    };
 
+    var getEditorData = function(){
+        return {
+            'html': htmlEditor.getValue(),
+            'css': cssEditor.getValue(),
+            'javascript': javascriptEditor.getValue()
+        };
+    };
+
+    var reset = function(){
+        htmlEditor.setValue(''),
+        cssEditor.setValue(''),
+        javascriptEditor.setValue('')
+    };
+
+    var tidyup = function(){
+        // html
+        var htmlLines = htmlEditor.lineCount();
+        for(var i = 0; i< htmlLines; i++){
+            htmlEditor.indentLine(i);
+        }
+
+        // css
+        var cssLines = cssEditor.lineCount();
+        for(var i = 0; i< cssLines; i++){
+            cssEditor.indentLine(i);
+        }
+
+        // javascript
+        var javascriptLines = javascriptEditor.lineCount();
+        for(var i = 0; i< javascriptLines; i++){
+            javascriptEditor.indentLine(i);
+        }
+    };
 
     exports.initEditor = initEditor;
+    exports.getEditorData = getEditorData;
+    exports.reset = reset;
+    exports.tidyup = tidyup;
 });
