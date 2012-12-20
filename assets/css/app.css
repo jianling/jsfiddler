@@ -208,9 +208,5 @@ body {
 
 }
 .editor-item {
-	display: none;
 	height: 300px;
-}
-#J_htmlEditor {
-	display: block;
 }

@@ -38,6 +38,10 @@ define(function(require, exports) {
         htmlEditorEle = htmlEditor.getWrapperElement();
         cssEditorEle = cssEditor.getWrapperElement();
         javascriptEditorEle = javascriptEditor.getWrapperElement();
+
+        // htmlEditor.setValue('hj');
+        // cssEditor.setValue('hj');
+        // javascriptEditor.setValue('kjkkkk');
     };
 
     var autoFix = function(){
@@ -51,7 +55,22 @@ define(function(require, exports) {
         createEditor();
         autoFix();
         baidu(window).resize(autoFix);
+        initTab();
     };
+
+    var initTab = function(){
+        baidu('.editor-item').hide();
+        baidu('#J_htmlEditor').show();
+        baidu('#J_editor li').click(function(){
+            var target = baidu(this).attr('target');
+            var targetId = 'J_' + target + 'Editor';
+
+            baidu('#J_editor li').removeClass('current');
+            baidu(this).addClass('current');
+            baidu('.editor-item').hide();
+            baidu('#' + targetId).show();
+        });
+    }
 
 
     exports.initEditor = initEditor;

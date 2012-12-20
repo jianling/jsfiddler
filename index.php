@@ -96,7 +96,7 @@
                 <div class="main-wrap">
                     <div id="J_demo"></div>
                     <div id="J_editor">
-                        <ul class="tab clearfix"><li class="current">HTML</li><li>CSS</li><li>Javascript</li></ul>
+                        <ul class="tab clearfix"><li class="current" target="html">HTML</li><li target="css">CSS</li><li target="javascript">Javascript</li></ul>
                         <div class="editor-item" id="J_htmlEditor"></div>
                         <div class="editor-item" id="J_cssEditor"></div>
                         <div class="editor-item" id="J_javascriptEditor"></div>
