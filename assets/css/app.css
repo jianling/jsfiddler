@@ -208,5 +208,11 @@ body {
 
 }
 .editor-item {
-	height: 300px;
+	height: 1px;
+}
+#J_htmlEditor {
+	display: block;
+}
+.CodeMirror-linenumbers {
+	width: 29px;
 }
