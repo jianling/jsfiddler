@@ -4,7 +4,23 @@
         <meta charset="utf-8">
         <title>Tangram & Magic online Demos</title>
         <link rel="stylesheet" type="text/css" href="./assets/css/app.css" />
+        <link rel="stylesheet" type="text/css" href="./assets/css/codemirror.css" />
         <script type="text/javascript" src="./assets/lib/sea.js"></script>
+        <script type="text/javascript" src="http://fe.bdimg.com/tangram/2.0.1.2.js"></script>
+        <style type="text/css" id="J_style">
+            .CodeMirror {
+                font-family: "Inconsolata", "Monaco", "Consolas", "Andale Mono", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+                line-height: 1.5;
+                position: relative;
+                overflow: hidden;
+            }
+            .CodeMirror {
+                font-family: "Inconsolata", "Monaco", "Consolas", "Andale Mono", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+                line-height: 1.5;
+                position: relative;
+                overflow: hidden;
+            }
+        </style>
     </head>
     <body>
         <div class="hd">
@@ -80,7 +96,7 @@
                 <div class="main-wrap">
                     <div id="J_demo"></div>
                     <div id="J_editor">
-                        <ul class="tab clearfix"><li>HTML</li><li>CSS</li><li>Javascript</li></ul>
+                        <ul class="tab clearfix"><li class="current">HTML</li><li>CSS</li><li>Javascript</li></ul>
                         <div class="editor-item" id="J_htmlEditor"></div>
                         <div class="editor-item" id="J_cssEditor"></div>
                         <div class="editor-item" id="J_javascriptEditor"></div>
@@ -88,12 +104,15 @@
                 </div>
             </div>
         </div>
-
-        <script type="text/javascript">
+        <script type="text/javascript" id="J_script">
             (function(){
                 seajs.config({
                     alias: {
-                        'Tangram': '../lib/tangram_2.0.1.2.js'
+                        'Tangram': '../lib/tangram_2.0.1.2.js',
+                        'CodeMirror': '../lib/codemirror/codemirror.js',
+                        'javascript': '../lib/codemirror/javascript.js',
+                        'css': '../lib/codemirror/css.js',
+                        'xml': '../lib/codemirror/xml.js'
                     },
                     base: './assets/js',
                     charset: 'utf-8'

@@ -1,4 +1,8 @@
 define(function(require, exports) {
     var baidu = require('Tangram').baidu;
-    console.log(baidu);
+    var Editor = require('Editor');
+
+    exports.run = function(){
+        Editor.initEditor();
+    };
 });
