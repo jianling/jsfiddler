@@ -38,6 +38,10 @@ define(function(require, exports) {
         htmlEditorEle = htmlEditor.getWrapperElement();
         cssEditorEle = cssEditor.getWrapperElement();
         javascriptEditorEle = javascriptEditor.getWrapperElement();
+
+        baidu(htmlEditor.getInputField()).attr('name', 'html');
+        baidu(cssEditor.getInputField()).attr('name', 'css');
+        baidu(javascriptEditor.getInputField()).attr('name', 'javascript');
     };
 
     var autoFix = function(){
@@ -76,6 +80,12 @@ define(function(require, exports) {
         };
     };
 
+    var synchronizeData = function(){
+        htmlEditor.getInputField().value = htmlEditor.getValue();
+        cssEditor.getInputField().value = cssEditor.getValue();
+        javascriptEditor.getInputField().value = javascriptEditor.getValue();
+    };
+
     var reset = function(){
         htmlEditor.setValue(''),
         cssEditor.setValue(''),
@@ -106,4 +116,5 @@ define(function(require, exports) {
     exports.getEditorData = getEditorData;
     exports.reset = reset;
     exports.tidyup = tidyup;
+    exports.synchronizeData = synchronizeData;
 });

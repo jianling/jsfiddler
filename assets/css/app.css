@@ -178,14 +178,14 @@ body {
 	margin-left: 230px;
 }
 #J_editor {
-	position: fixed;
+	/*position: fixed;
 	bottom: 0;
-	left: 230px;
+	left: 230px;*/
 	min-width: 800px;
 	min-height: 300px;
 	background-color: #FFF;
-	border-top: 1px solid #E1E1E1;
-	border-left	: 1px solid #E1E1E1;
+	border: 1px solid #E1E1E1;
+	border-width: 1px 0 1px 1px;
 }
 #J_editor .tab {
 	background-color: #F7F7F7;
@@ -215,4 +215,14 @@ body {
 }
 .CodeMirror-linenumbers {
 	width: 29px;
+}
+#J_demoIframe {
+	background-color: #FFF;
+	margin-top: 10px;
+	border: 1px solid #E1E1E1;
+	border-width: 1px 0 1px 1px;
+	height: 400px;
+}
+#J_externalResources {
+	display: none;
 }

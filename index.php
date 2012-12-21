@@ -57,12 +57,7 @@
                         <input id="J_externalResource" type="text" value="" placeholder="Javascript/CSS URL">
                         <a id="J_addExternalResource" title="Add resource"></a>
                     </div>
-                    <ul class="external_resources_list" id="J_externalResourcesList">
-                        <li><a class="resource-item" href="http://localhost/jsfiddler/assets/lib/tangram_2.0.1.2.js" title="http://localhost/jsfiddler/assets/lib/tangram_2.0.1.2.js" target="_blank">tangram_2.0.1.1.js</a><a class="remove" title="删除该资源"></a><a class="enable-toggler enable" title="禁用该资源"></a></li>
-                        <li><a class="resource-item" href="http://localhost/jsfiddler/assets/lib/tangram_2.0.1.2.js" title="http://localhost/jsfiddler/assets/lib/tangram_2.0.1.2.js" target="_blank">tangram_2.0.1.1.js</a><a class="remove" title="删除该资源"></a><a class="enable-toggler disable" title="启用该资源"></a></li>
-                        <li><a class="resource-item" href="http://localhost/jsfiddler/assets/lib/tangram_2.0.1.2.js" title="http://localhost/jsfiddler/assets/lib/tangram_2.0.1.2.js" target="_blank">tangram_2.0.1.1.js</a><a class="remove" title="删除该资源"></a><a class="enable-toggler enable" title="禁用该资源"></a></li>
-                        <li><a class="resource-item" href="http://localhost/jsfiddler/assets/lib/tangram_2.0.1.2.js" title="http://localhost/jsfiddler/assets/lib/tangram_2.0.1.2.js" target="_blank">tangram_2.0.1.1.js</a><a class="remove" title="删除该资源"></a><a class="enable-toggler disable" title="启用该资源"></a></li>
-                    </ul>
+                    <ul class="external_resources_list" id="J_externalResourcesList"></ul>
                 </div>
                 <!-- Choose Language -->
                 <h3 class="toggler active">Choose Language</h3>
@@ -80,12 +75,17 @@
             </div>
             <div class="col-main">
                 <div class="main-wrap">
-                    <div id="J_demo"></div>
+                    <div id="J_demo">
+                        <iframe name="demo" id="J_demoIframe" src="./demo.php" frameborder="no" scrolling="auto" ></iframe>
+                    </div>
                     <div id="J_editor">
                         <ul class="tab clearfix"><li class="current" target="html">HTML</li><li target="css">CSS</li><li target="javascript">Javascript</li></ul>
-                        <div class="editor-item" id="J_htmlEditor"></div>
-                        <div class="editor-item" id="J_cssEditor"></div>
-                        <div class="editor-item" id="J_javascriptEditor"></div>
+                        <form method="POST" action="./demo.php" target="demo" id="J_demoForm">
+                            <div class="editor-item" id="J_htmlEditor"></div>
+                            <div class="editor-item" id="J_cssEditor"></div>
+                            <div class="editor-item" id="J_javascriptEditor"></div>
+                            <textarea id="J_externalResources" name="resource"><script type="text/javascript" src="http://fe.bdimg.com/tangram/2.0.1.2.js"></script></textarea>
+                        </form>
                     </div>
                 </div>
             </div>
