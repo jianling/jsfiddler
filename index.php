@@ -6,7 +6,6 @@
         <link rel="stylesheet" type="text/css" href="./assets/css/app.css" />
         <link rel="stylesheet" type="text/css" href="./assets/css/codemirror.css" />
         <script type="text/javascript" src="./assets/lib/sea.js"></script>
-        <script type="text/javascript" src="http://fe.bdimg.com/tangram/2.0.1.2.js"></script>
     </head>
     <body>
         <div class="hd">
@@ -25,30 +24,13 @@
                 <!-- Choose Framework -->
                 <h3 class="toggler active">Choose Framework</h3>
                 <div class="sidebar-item">
-                    <select id="J_tangramSelect">
-                        <option value="2.0.0.0">Tangram 2.0.0.0</option>
-                        <option value="2.0.0.1">Tangram 2.0.0.1</option>
-                        <option value="2.0.0.2">Tangram 2.0.0.2</option>
-                    </select>
-                    <select id="J_magicSelect">
-                        <option value="1.0.0.0">Magic 1.0.0.0</option>
-                        <option value="1.0.0.1">Magic 1.0.0.1</option>
-                        <option value="1.0.0.2" disabled="disabled">Magic 1.0.0.2</option>
-                    </select>
+                    <select id="J_frameworkSelect"></select>
                 </div>
                 <!-- Choose Demo -->
                 <h3 class="toggler">Choose Demo</h3>
                 <div class="sidebar-item">
-                    <select id="J_apiSelect">
-                        <option value="calendar">Calendar</option>
-                        <option value="dialog">Dialog</option>
-                        <option value="suggestion">Suggestion</option>
-                    </select>
-                    <select id="J_demoSelect">
-                        <option value="quickstart.html">quickStart</option>
-                        <option value="timer.html">timer</option>
-                        <option value="buttons.html">buttons</option>
-                    </select>
+                    <select id="J_apiSelect"></select>
+                    <select id="J_demoSelect"></select>
                 </div>
                 <!-- Add Resources -->
                 <h3 class="toggler">Add Resources</h3>
@@ -84,7 +66,8 @@
                             <div class="editor-item" id="J_htmlEditor"></div>
                             <div class="editor-item" id="J_cssEditor"></div>
                             <div class="editor-item" id="J_javascriptEditor"></div>
-                            <textarea id="J_externalResources" name="resource"><script type="text/javascript" src="http://fe.bdimg.com/tangram/2.0.1.2.js"></script></textarea>
+                            <textarea id="J_externalResources" name="resource"></textarea>
+                            <textarea id="J_assets" name="assets"></textarea>
                         </form>
                     </div>
                 </div>

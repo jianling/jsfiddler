@@ -79,6 +79,9 @@ body {
 	width: 220px;
 	background-color: #FFF;
 	position: absolute;
+	border: 1px solid #E1E1E1;
+	border-width: 1px 1px 0px 0px;
+	margin-top: 10px;
 }
 .col-sub .toggler {
 	font-size: 12px;
@@ -94,7 +97,7 @@ body {
 	background-color: #E9E9E9;
 }
 .col-sub .active {
-	background-position: 200px -22px;
+	background-position: 200px -21px;
 	background-color: #E9E9E9;
 	color: #333;
 }
@@ -106,6 +109,7 @@ body {
 .col-sub .sidebar-item select {
 	width: 100%;
 	margin: 3px;
+	height: 25px;
 }
 #J_externalResourcesForm {
 	height: 30px;
@@ -223,6 +227,7 @@ body {
 	border-width: 1px 0 1px 1px;
 	height: 400px;
 }
-#J_externalResources {
+#J_externalResources,
+#J_assets {
 	display: none;
 }

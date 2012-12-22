@@ -69,7 +69,19 @@ define(function(require, exports) {
             baidu(this).addClass('current');
             baidu('.editor-item').hide();
             baidu('#' + targetId).show();
+
+            // 把编辑器都强刷一下，要不然可能不渲染
+            htmlEditor.refresh();
+            cssEditor.refresh();
+            javascriptEditor.refresh();
         });
+    };
+
+    var setEditorData = function(data){
+        htmlEditor.setValue(data.html);
+        cssEditor.setValue(data.css);
+        javascriptEditor.setValue(data.javascript);
+        tidyup();
     };
 
     var getEditorData = function(){
@@ -113,6 +125,7 @@ define(function(require, exports) {
     };
 
     exports.initEditor = initEditor;
+    exports.setEditorData = setEditorData;
     exports.getEditorData = getEditorData;
     exports.reset = reset;
     exports.tidyup = tidyup;
