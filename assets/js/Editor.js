@@ -124,10 +124,19 @@ define(function(require, exports) {
         }
     };
 
+    var getEditor = function(){
+        return {
+            'html': htmlEditor,
+            'css': cssEditor,
+            'javascript': javascriptEditor
+        }
+    }
+
     exports.initEditor = initEditor;
     exports.setEditorData = setEditorData;
     exports.getEditorData = getEditorData;
     exports.reset = reset;
     exports.tidyup = tidyup;
     exports.synchronizeData = synchronizeData;
+    exports.getEditor = getEditor;
 });

@@ -1,6 +1,7 @@
 define(function(require, exports) {
     var baidu = require('Tangram').baidu;
     var Editor = require('Editor');
+    var Tools = require('Tools');
     var ExternalResource = require('ExternalResource');
 
     var initToolbar = function(){
@@ -14,6 +15,8 @@ define(function(require, exports) {
             }
 
             baidu('#J_externalResources').val(imports.join(''));
+            baidu('#J_version').val(baidu('#J_frameworkSelect').val());
+
             baidu('#J_demoForm').submit();
         });
 
@@ -78,6 +81,25 @@ define(function(require, exports) {
         
         baidu('#J_demoForm').submit(function(){
             Editor.synchronizeData();
+
+            // base64编码
+            var htmlField = Editor.getEditor().html.getInputField();
+            htmlField.value = Tools.Base64.encode(htmlField.value);
+
+            var cssField = Editor.getEditor().css.getInputField();
+            cssField.value = Tools.Base64.encode(cssField.value);
+            
+            var javascriptField = Editor.getEditor().javascript.getInputField();
+            javascriptField.value = Tools.Base64.encode(javascriptField.value);
+
+            var resourceField = baidu('#J_externalResources')[0];
+            resourceField.value = Tools.Base64.encode(resourceField.value);
+
+            var assetsField = baidu('#J_assets')[0];
+            assetsField.value = Tools.Base64.encode(assetsField.value);
+
+            var versionField = baidu('#J_version')[0];
+            versionField.value = Tools.Base64.encode(versionField.value);
         });
 
         baidu.get('./getversions.php', function(versions){

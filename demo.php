@@ -1,15 +1,27 @@
 <?php
-    $htmlcode = $_POST['html'];
-    $csscode = $_POST['css'];
-    $javascriptcode = $_POST['javascript'];
-    $assets = $_POST['assets'];
-    $resource = $_POST['resource'];
+    $htmlcode = base64_decode($_POST['html']);
+    $csscode = base64_decode($_POST['css']);
+    $javascriptcode = base64_decode($_POST['javascript']);
+    $assets = base64_decode($_POST['assets']);
+    $resource = base64_decode($_POST['resource']);
+    $version = base64_decode($_POST['version']);
 
-    $htmlcode = preg_replace(array('/\\\\"/', '/\\\\\'/'), array('"', "'"), $htmlcode);
-    $csscode = preg_replace(array('/\\\\"/', '/\\\\\'/', '/..\/..\//'), array('"', "'", 'http://localhost/MagicCube/'), $csscode);
-    $javascriptcode = preg_replace(array('/\\\\"/', '/\\\\\'/', '/..\/..\//'), array('"', "'", 'http://localhost/MagicCube/'), $javascriptcode);
-    $assets = preg_replace(array('/\\\\"/', '/\\\\\'/', '/..\/..\//'), array('"', "'", 'http://localhost/MagicCube/'), $assets);
-    $resource = preg_replace('/(\\\\"|\\\\\')/', '\'', $resource);
+    $server_base = 'http://'.$_SERVER['SERVER_NAME'].$_SERVER['SCRIPT_NAME'];
+    $server_base = preg_replace('/jsfiddler\/demo.php/', '', $server_base);
+
+    if(preg_match('/Tangram/', $version)){
+        $framework_dir = $server_base.'Tangram2/';
+    }else{
+        $framework_dir = $server_base.'MagicCube/';
+    }
+
+    // $htmlcode = preg_replace(array('/\\\\"/', '/\\\\\'/'), array('"', "'"), $htmlcode);
+    // $csscode = preg_replace(array('/\\\\"/', '/\\\\\'/', '/..\/..\//'), array('"', "'", $framework_dir), $csscode);
+    $csscode = preg_replace('/..\/..\//', $framework_dir, $csscode);
+    $javascriptcode = preg_replace('/..\/..\//', $framework_dir, $javascriptcode);
+    // $assets = preg_replace(array('/\\\\"/', '/\\\\\'/', '/..\/..\//'), array('"', "'", $framework_dir), $assets);
+    $assets = preg_replace('/..\/..\//', $framework_dir, $assets);
+    // $resource = preg_replace('/(\\\\"|\\\\\')/', '\'', $resource);
 
     if(!$htmlcode && !$csscode && !$javascriptcode && !$assets && !$resource)
         return;

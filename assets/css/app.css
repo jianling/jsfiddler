@@ -228,6 +228,7 @@ body {
 	height: 400px;
 }
 #J_externalResources,
-#J_assets {
+#J_assets,
+#J_version {
 	display: none;
 }

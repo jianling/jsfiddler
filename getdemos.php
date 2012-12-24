@@ -1,10 +1,14 @@
 <?php
     $component = $_GET['component'];
 
+    $currentdir =  dirname(__FILE__);
+    $tangram_demo_dir = preg_replace('/jsfiddler/', '', $currentdir).'Tangram2/demos/';
+    $magic_demo_dir = preg_replace('/jsfiddler/', '', $currentdir).'MagicCube/demos/';
+
     if(preg_match('/baidu/', $component)){
-        $demodir = 'F:/baidu/Tangram2/demos/'.$component;
+        $demodir = $tangram_demo_dir.$component;
     }else{
-        $demodir = 'F:/baidu/MagicCube/demos/'.$component;
+        $demodir = $magic_demo_dir.$component;
     }
 
     $demos = array();

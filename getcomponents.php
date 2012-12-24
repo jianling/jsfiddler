@@ -1,10 +1,12 @@
 <?php
     $version = $_GET['version'];
 
+    $currentdir =  dirname(__FILE__);
+    
     if(preg_match('/Tangram/', $version)){
-        $demodir = 'F:/baidu/Tangram2/demos';
+        $demodir = preg_replace('/jsfiddler/', '', $currentdir).'Tangram2/demos';
     }else{
-        $demodir = 'F:/baidu/MagicCube/demos';
+        $demodir = preg_replace('/jsfiddler/', '', $currentdir).'MagicCube/demos';
     }
 
     $components = array();

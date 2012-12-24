@@ -2,8 +2,12 @@
     $demo = $_GET['demo'];
     $component = $_GET['component'];
 
+    $currentdir =  dirname(__FILE__);
+    $tangram_demo_dir = preg_replace('/jsfiddler/', '', $currentdir).'Tangram2/demos/';
+    $magic_demo_dir = preg_replace('/jsfiddler/', '', $currentdir).'MagicCube/demos/';
+
     if(preg_match('/baidu/', $component)){
-        $demo = 'F:/baidu/Tangram2/demos/'.$component.'/'.$demo;
+        $demo = $tangram_demo_dir.$component.'/'.$demo;
         $content = file_get_contents($demo);
 
         $html = '';
@@ -43,7 +47,7 @@
         echo json_encode($demo);
 
     }else{
-        $demo = 'F:/baidu/MagicCube/demos/'.$component.'/'.$demo;
+        $demo = $magic_demo_dir.$component.'/'.$demo;
         $content = file_get_contents($demo);
 
         $html = '';

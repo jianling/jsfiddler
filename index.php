@@ -68,6 +68,7 @@
                             <div class="editor-item" id="J_javascriptEditor"></div>
                             <textarea id="J_externalResources" name="resource"></textarea>
                             <textarea id="J_assets" name="assets"></textarea>
+                            <textarea id="J_version" name="version"></textarea>
                         </form>
                     </div>
                 </div>
