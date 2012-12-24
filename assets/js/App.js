@@ -4,19 +4,11 @@ define(function(require, exports) {
     var Tools = require('Tools');
     var ExternalResource = require('ExternalResource');
 
+    var assets = ''; // 存放demo里面的link和script部分
+
     var initToolbar = function(){
         baidu('#J_run').click(function(){
-            // var data = Editor.getEditorData();
-            var resources = ExternalResource.getEnableResources();
-            var imports = [];
-            for(var i = 0; i < resources.length; i++){
-                /.css$/.test(resources[i].url) ? imports.push('<link rel="stylesheet" type="text/css" href="' + resources[i].url + '" />') : 
-                                             imports.push('<script type="text/javascript" src="' + resources[i].url + '"></script>');
-            }
-
-            baidu('#J_externalResources').val(imports.join(''));
-            baidu('#J_version').val(baidu('#J_frameworkSelect').val());
-
+            // onsubmit中有部分逻辑
             baidu('#J_demoForm').submit();
         });
 
@@ -60,7 +52,7 @@ define(function(require, exports) {
             var demo = baidu(this).val();
             baidu.get('./getdemo.php?demo=' + demo + '&component=' + baidu('#J_apiSelect').val(), function(data){
                 Editor.setEditorData(data);
-                baidu('#J_assets')[0].value = data.assets;
+                assets = data.assets;
                 baidu('#J_run').trigger('click');
             }, 'json');
         });
@@ -82,6 +74,17 @@ define(function(require, exports) {
         baidu('#J_demoForm').submit(function(){
             Editor.synchronizeData();
 
+            // var data = Editor.getEditorData();
+            var resources = ExternalResource.getEnableResources();
+            var imports = [];
+            for(var i = 0; i < resources.length; i++){
+                /.css$/.test(resources[i].url) ? imports.push('<link rel="stylesheet" type="text/css" href="' + resources[i].url + '" />') : 
+                                             imports.push('<script type="text/javascript" src="' + resources[i].url + '"></script>');
+            }
+
+            baidu('#J_externalResources').val(imports.join(''));
+            baidu('#J_version').val(baidu('#J_frameworkSelect').val());
+
             // base64编码
             var htmlField = Editor.getEditor().html.getInputField();
             htmlField.value = Tools.Base64.encode(htmlField.value);
@@ -96,7 +99,7 @@ define(function(require, exports) {
             resourceField.value = Tools.Base64.encode(resourceField.value);
 
             var assetsField = baidu('#J_assets')[0];
-            assetsField.value = Tools.Base64.encode(assetsField.value);
+            assetsField.value = Tools.Base64.encode(assets);
 
             var versionField = baidu('#J_version')[0];
             versionField.value = Tools.Base64.encode(versionField.value);
