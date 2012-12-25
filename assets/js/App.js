@@ -44,6 +44,7 @@ define(function(require, exports) {
                     _options.push('<option value="' + item + '">' + item + '</option>');
                 });
                 baidu('#J_demoSelect').html(_options.join(''));
+                baidu('#J_demoSelect').val('quickStart.html');
                 baidu('#J_demoSelect').trigger('change');
             }, 'json');
         });

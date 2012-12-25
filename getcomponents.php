@@ -15,7 +15,7 @@
     $filename = readdir($handler);
 
     while($filename){
-        if(is_dir($demodir.'/'.$filename) && $filename != '.' && $filename != '..'){
+        if(is_dir($demodir.'/'.$filename) && $filename != '.' && $filename != '..' && !preg_match('/^_/', $filename) && $filename != 'common'){
             array_push($components, $filename);
             
         }

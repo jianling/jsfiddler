@@ -52,7 +52,7 @@
                 <div class="sidebar-item develope-item">
                     <p><input type="checkbox" id="J_check" /><label for="J_check">参数检查</label></p>
                     <p><input type="checkbox" id="J_compatible" /><label for="J_compatible">兼容1.x</label></p>
-                    <p><input type="checkbox" id="J_sizzle" /><label>完整版Sizzle</label></p>
+                    <p><input type="checkbox" id="J_sizzle" /><label for="J_sizzle">完整版Sizzle</label></p>
                 </div>
             </div>
             <div class="col-main">
