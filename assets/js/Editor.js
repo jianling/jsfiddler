@@ -63,6 +63,9 @@ define(function(require, exports) {
         baidu('#J_htmlEditor').show();
         baidu('#J_editor li').click(function(){
             var target = baidu(this).attr('target');
+
+            if(target == 'console') return;
+
             var targetId = 'J_' + target + 'Editor';
 
             baidu('#J_editor li').removeClass('current');

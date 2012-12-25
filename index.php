@@ -6,6 +6,7 @@
         <link rel="stylesheet" type="text/css" href="./assets/css/app.css" />
         <link rel="stylesheet" type="text/css" href="./assets/css/codemirror.css" />
         <script type="text/javascript" src="./assets/lib/sea.js"></script>
+        <script type="text/javascript" src="http://fe.bdimg.com/tangram/2.0.1.2.js"></script>
     </head>
     <body>
         <div class="hd">
@@ -27,13 +28,13 @@
                     <select id="J_frameworkSelect"></select>
                 </div>
                 <!-- Choose Demo -->
-                <h3 class="toggler">Choose Demo</h3>
+                <h3 class="toggler active">Choose Demo</h3>
                 <div class="sidebar-item">
                     <select id="J_apiSelect"></select>
                     <select id="J_demoSelect"></select>
                 </div>
                 <!-- Add Resources -->
-                <h3 class="toggler">Add Resources</h3>
+                <h3 class="toggler active">Add Resources</h3>
                 <div class="sidebar-item">
                     <div id="J_externalResourcesForm">
                         <input id="J_externalResource" type="text" value="" placeholder="Javascript/CSS URL">
@@ -48,7 +49,7 @@
                     <p><input type="checkbox" id="J_languageEN" /><label for="J_languageEN" title="中文语言包">en-US</label></p>
                 </div>
                 <!-- Develop Options -->
-                <h3 class="toggler">Develop Options</h3>
+                <h3 class="toggler active">Develop Options</h3>
                 <div class="sidebar-item develope-item">
                     <p><input type="checkbox" id="J_check" /><label for="J_check">参数检查</label></p>
                     <p><input type="checkbox" id="J_compatible" /><label for="J_compatible">兼容1.x</label></p>
@@ -66,6 +67,7 @@
                             <div class="editor-item" id="J_htmlEditor"></div>
                             <div class="editor-item" id="J_cssEditor"></div>
                             <div class="editor-item" id="J_javascriptEditor"></div>
+                            <div class="editor-item" id="J_console"></div>
                             <textarea id="J_externalResources" name="resource"></textarea>
                             <textarea id="J_assets" name="assets"></textarea>
                             <textarea id="J_version" name="version"></textarea>

@@ -1,6 +1,11 @@
+html {
+    overflow: visible;
+}
+
 /* tangram demo */
 .tangram-demo {
     padding: 10px;
+    overflow-y: visible;
 }
 .tangram-demo .ac-h1 {
     height: 30px;

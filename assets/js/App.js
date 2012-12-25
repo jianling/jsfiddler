@@ -2,6 +2,7 @@ define(function(require, exports) {
     var baidu = require('Tangram').baidu;
     var Editor = require('Editor');
     var Tools = require('Tools');
+    var Console = require('Console');
     var ExternalResource = require('ExternalResource');
 
     var assets = ''; // 存放demo里面的link和script部分
@@ -71,6 +72,7 @@ define(function(require, exports) {
         initToolbar();
         initSelect();
         ExternalResource.init();
+        Console.init();
         
         baidu('#J_demoForm').submit(function(){
             Editor.synchronizeData();

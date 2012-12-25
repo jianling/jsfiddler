@@ -21,8 +21,10 @@
         }
 
         $javascript = '';
-        if(preg_match('/<script\s*(?:type=[\'"]text\/javascript[\'"]){0,1}>([\s\S]*?)<\/script>/', $content, $matchs)){
-            $javascript = $matchs[1];
+        if(preg_match_all('/<script.*?>([\s\S]*?)<\/script>/', $content, $matchs)){
+            foreach ($matchs[1] as $match) {
+                $javascript .= $match;
+            }
         }
 
         $assets = '';
