@@ -9,6 +9,7 @@ define(function(require, exports) {
 
     var initToolbar = function(){
         baidu('#J_run').click(function(){
+            Console.clear();
             // onsubmit中有部分逻辑
             baidu('#J_demoForm').submit();
         });
@@ -25,40 +26,57 @@ define(function(require, exports) {
     var initSelect = function(){
         // Choose Framework
         baidu('#J_frameworkSelect').change(function(){
-            var version = baidu(this).val();
-            baidu.get('./getcomponents.php?version=' + version, function(components){
-                var _options = [];
-                baidu.array(components).each(function(index, item) {
-                    _options.push('<option value="' + item + '">' + item + '</option>');
-                });
-                baidu('#J_apiSelect').html(_options.join(''));
-                baidu('#J_apiSelect').trigger('change');
-            }, 'json');
+            var lib = baidu(this).val();
+
+            if(lib == 'tangram'){
+                baidu('#J_tip').hide();
+            }else{
+                baidu('#J_tip').show();
+            }
+            baidu.ajax('http://tangram2.offline.bae.baidu.com/magic/?m=demos&a=getComponents&lib=' + lib, {
+                success: function(components){
+                    var _options = [];
+                    baidu.array(components).each(function(index, item) {
+                        _options.push('<option value="' + item + '">' + item + '</option>');
+                    });
+                    baidu('#J_apiSelect').html(_options.join(''));
+                    baidu('#J_apiSelect').trigger('change');
+                },
+                dataType: 'jsonp'
+            });
         });
 
         // Choose Demo
         baidu('#J_apiSelect').change(function(){
             var component = baidu(this).val();
-            baidu.get('./getdemos.php?component=' + component, function(demos){
-                var _options = [];
-                baidu.array(demos).each(function(index, item) {
-                    _options.push('<option value="' + item + '">' + item + '</option>');
-                });
-                baidu('#J_demoSelect').html(_options.join(''));
-                baidu('#J_demoSelect').val('quickStart.html');
-                baidu('#J_demoSelect').trigger('change');
-            }, 'json');
+            var lib = baidu('#J_frameworkSelect').val();
+            baidu.ajax('http://tangram2.offline.bae.baidu.com/magic/?m=demos&a=getDemos&component=' + component + '&lib=' + lib, {
+                success: function(demos){
+                    var _options = [];
+                    baidu.array(demos).each(function(index, item) {
+                        _options.push('<option value="' + item + '">' + item + '</option>');
+                    });
+                    baidu('#J_demoSelect').html(_options.join(''));
+                    baidu('#J_demoSelect').val('quickStart.html');
+                    baidu('#J_demoSelect').trigger('change');
+                },
+                dataType: 'jsonp'
+            });
         });
 
         baidu('#J_demoSelect').change(function(){
             var demo = baidu(this).val();
-            baidu.get('./getdemo.php?demo=' + demo + '&component=' + baidu('#J_apiSelect').val(), function(data){
-                Editor.setEditorData(data);
-                // 清空控制台
-                Console.clear();
-                assets = data.assets;
-                baidu('#J_run').trigger('click');
-            }, 'json');
+            var lib = baidu('#J_frameworkSelect').val();
+            baidu.ajax('http://tangram2.offline.bae.baidu.com/magic/?m=demos&a=getDemo&demo=' + demo + '&component=' + baidu('#J_apiSelect').val() + '&lib=' + lib, {
+                success: function(data){
+                    Editor.setEditorData(data);
+                    // 清空控制台
+                    Console.clear();
+                    assets = data.assets;
+                    baidu('#J_run').trigger('click');
+                },
+                dataType: 'jsonp'
+            });
         });
     };
 
@@ -90,7 +108,7 @@ define(function(require, exports) {
             }
 
             baidu('#J_externalResources').val(imports.join(''));
-            baidu('#J_version').val(baidu('#J_frameworkSelect').val());
+            baidu('#J_lib').val(baidu('#J_frameworkSelect').val());
 
             // base64编码
             var htmlField = Editor.getEditor().html.getInputField();
@@ -108,28 +126,29 @@ define(function(require, exports) {
             var assetsField = baidu('#J_assets')[0];
             assetsField.value = Tools.Base64.encode(assets);
 
-            var versionField = baidu('#J_version')[0];
-            versionField.value = Tools.Base64.encode(versionField.value);
+            var libField = baidu('#J_lib')[0];
+            libField.value = Tools.Base64.encode(libField.value);
         });
 
-        baidu.get('./getversions.php', function(versions){
-            var tangrams = [], magics = [];
-            baidu.array(versions).each(function(index, item) {
-                /tangram/i.test(item) ? tangrams.push(item) : magics.push(item);
-            });
+        // baidu.get('./getversions.php', function(versions){
+        //     var tangrams = [], magics = [];
+        //     baidu.array(versions).each(function(index, item) {
+        //         /tangram/i.test(item) ? tangrams.push(item) : magics.push(item);
+        //     });
 
-            var _options = ['<option>Choose Framework</option>','<optgroup label="Tangram">'];
-            baidu.array(tangrams).each(function(index, item) {
-                _options.push('<option value="' + item + '">' + item + '</option>');
-            });
-            _options.push('</optgroup><optgroup label="Magic">');
-            baidu.array(magics).each(function(index, item) {
-                _options.push('<option value="' + item + '">' + item + '</option>');
-            });
-            _options.push('</optgroup>');
+        //     var _options = ['<option>Choose Framework</option>','<optgroup label="Tangram">'];
+        //     baidu.array(tangrams).each(function(index, item) {
+        //         _options.push('<option value="' + item + '">' + item + '</option>');
+        //     });
+        //     _options.push('</optgroup><optgroup label="Magic">');
+        //     baidu.array(magics).each(function(index, item) {
+        //         _options.push('<option value="' + item + '">' + item + '</option>');
+        //     });
+        //     _options.push('</optgroup>');
 
-            baidu('#J_frameworkSelect').html(_options.join(''));
-            // baidu('#J_frameworkSelect').trigger('change');
-        }, 'json');
+        //     baidu('#J_frameworkSelect').html(_options.join(''));
+        // }, 'json');
+        
+        baidu('#J_frameworkSelect').trigger('change');
     };
 });

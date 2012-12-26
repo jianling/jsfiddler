@@ -25,7 +25,11 @@
                 <!-- Choose Framework -->
                 <h3 class="toggler active">Choose Framework</h3>
                 <div class="sidebar-item">
-                    <select id="J_frameworkSelect"></select>
+                    <div class="tip" id="J_tip">当前Magic使用的Tangram版本为2.0.1.2纯净版</div>
+                    <select id="J_frameworkSelect">
+                        <option value="tangram">Tangram</option>
+                        <option value="magic">Magic</option>
+                    </select>
                 </div>
                 <!-- Choose Demo -->
                 <h3 class="toggler active">Choose Demo</h3>
@@ -70,7 +74,7 @@
                             <div class="editor-item" id="J_console"></div>
                             <textarea id="J_externalResources" name="resource"></textarea>
                             <textarea id="J_assets" name="assets"></textarea>
-                            <textarea id="J_version" name="version"></textarea>
+                            <textarea id="J_lib" name="lib"></textarea>
                         </form>
                     </div>
                 </div>

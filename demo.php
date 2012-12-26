@@ -4,12 +4,12 @@
     $javascriptcode = base64_decode($_POST['javascript']);
     $assets = base64_decode($_POST['assets']);
     $resource = base64_decode($_POST['resource']);
-    $version = base64_decode($_POST['version']);
+    $lib = base64_decode($_POST['lib']);
 
     $server_base = 'http://'.$_SERVER['SERVER_NAME'].$_SERVER['SCRIPT_NAME'];
     $server_base = preg_replace('/jsfiddler\/demo.php/', '', $server_base);
 
-    if(preg_match('/Tangram/', $version)){
+    if(preg_match('/tangram/', $lib)){
         $body_classname = 'tangram-demo';
         $framework_dir = $server_base.'Tangram2/';
     }else{

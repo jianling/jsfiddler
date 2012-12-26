@@ -106,6 +106,18 @@ body {
 	border-bottom: 1px solid #D5D5D5;
 	padding: 10px;
 }
+.col-sub .tip {
+	background: #FEFFE5;
+	padding: 7px;
+	border: 1px solid #EBBA95;
+	color: #C98657;
+	margin: 7px 8px 10px;
+	line-height: 130%;
+	text-shadow: 0 1px 0 #FFF7F4;
+	display: none;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+}
 
 .col-sub .sidebar-item select {
 	width: 100%;
@@ -234,7 +246,7 @@ body {
 }
 #J_externalResources,
 #J_assets,
-#J_version {
+#J_lib {
 	display: none;
 }
 

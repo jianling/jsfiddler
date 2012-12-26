@@ -1,9 +1,9 @@
 <?php
-    $version = $_GET['version'];
+    $lib = $_GET['lib'];
 
     $currentdir =  dirname(__FILE__);
     
-    if(preg_match('/Tangram/', $version)){
+    if(preg_match('/tangram/', $lib)){
         $demodir = preg_replace('/jsfiddler/', '', $currentdir).'Tangram2/demos';
     }else{
         $demodir = preg_replace('/jsfiddler/', '', $currentdir).'MagicCube/demos';
