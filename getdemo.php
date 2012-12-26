@@ -1,6 +1,7 @@
 <?php
     $demo = $_GET['demo'];
     $component = $_GET['component'];
+    $callback = $_GET['callback'];
 
     $currentdir =  dirname(__FILE__);
     $tangram_demo_dir = preg_replace('/jsfiddler/', '', $currentdir).'Tangram2/demos/';
@@ -46,7 +47,7 @@
                     'assets' => $assets
                 );
 
-        echo json_encode($demo);
+        echo $callback.'('.json_encode($demo).')';
 
     }else{
         $demo = $magic_demo_dir.$component.'/'.$demo;
@@ -87,6 +88,6 @@
                     'assets' => $assets
                 );
 
-        echo json_encode($demo);
+        echo $callback.'('.json_encode($demo).')';
     }
 ?>

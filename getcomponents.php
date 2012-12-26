@@ -1,5 +1,6 @@
 <?php
     $lib = $_GET['lib'];
+    $callback = $_GET['callback'];
 
     $currentdir =  dirname(__FILE__);
     
@@ -22,5 +23,5 @@
         $filename = readdir($handler);
     }
 
-    echo json_encode($components);
+    echo $callback.'('.json_encode($components).')';
 ?>

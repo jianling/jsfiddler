@@ -7,6 +7,22 @@ define(function(require, exports) {
 
     var assets = ''; // 存放demo里面的link和script部分
 
+    // 判断环境
+    var getComponentsURL = 'http://tangram.baidu.com/magic/?m=demos&a=getComponents';
+    var getDemosURL = 'http://tangram.baidu.com/magic/?m=demos&a=getDemos';
+    var getDemoURL = 'http://tangram.baidu.com/magic/?m=demos&a=getDemo';
+    if(!/(tangram\.baidu\.com)/.test(window.location.href)){
+        var getComponentsURL = 'http://tangram2.offline.bae.baidu.com/magic/?m=demos&a=getComponents';
+        var getDemosURL = 'http://tangram2.offline.bae.baidu.com/magic/?m=demos&a=getDemos';
+        var getDemoURL = 'http://tangram2.offline.bae.baidu.com/magic/?m=demos&a=getDemo';
+    }
+
+    if(/debug/.test(window.location.search)){
+        var getComponentsURL = './getcomponents.php?';
+        var getDemosURL = './getdemos.php?';
+        var getDemoURL = './getdemo.php?';
+    }
+
     var initToolbar = function(){
         baidu('#J_run').click(function(){
             Console.clear();
@@ -33,7 +49,7 @@ define(function(require, exports) {
             }else{
                 baidu('#J_tip').show();
             }
-            baidu.ajax('http://tangram2.offline.bae.baidu.com/magic/?m=demos&a=getComponents&lib=' + lib, {
+            baidu.ajax(getComponentsURL + '&lib=' + lib, {
                 success: function(components){
                     var _options = [];
                     baidu.array(components).each(function(index, item) {
@@ -50,7 +66,7 @@ define(function(require, exports) {
         baidu('#J_apiSelect').change(function(){
             var component = baidu(this).val();
             var lib = baidu('#J_frameworkSelect').val();
-            baidu.ajax('http://tangram2.offline.bae.baidu.com/magic/?m=demos&a=getDemos&component=' + component + '&lib=' + lib, {
+            baidu.ajax(getDemosURL + '&component=' + component + '&lib=' + lib, {
                 success: function(demos){
                     var _options = [];
                     baidu.array(demos).each(function(index, item) {
@@ -67,7 +83,7 @@ define(function(require, exports) {
         baidu('#J_demoSelect').change(function(){
             var demo = baidu(this).val();
             var lib = baidu('#J_frameworkSelect').val();
-            baidu.ajax('http://tangram2.offline.bae.baidu.com/magic/?m=demos&a=getDemo&demo=' + demo + '&component=' + baidu('#J_apiSelect').val() + '&lib=' + lib, {
+            baidu.ajax(getDemoURL + '&demo=' + demo + '&component=' + baidu('#J_apiSelect').val() + '&lib=' + lib, {
                 success: function(data){
                     Editor.setEditorData(data);
                     // 清空控制台

@@ -1,5 +1,6 @@
 <?php
     $component = $_GET['component'];
+    $callback = $_GET['callback'];
 
     $currentdir =  dirname(__FILE__);
     $tangram_demo_dir = preg_replace('/jsfiddler/', '', $currentdir).'Tangram2/demos/';
@@ -23,5 +24,5 @@
         $filename = readdir($handler);
     }
 
-    echo json_encode($demos);
+    echo $callback.'('.json_encode($demos).')';
 ?>
