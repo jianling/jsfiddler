@@ -43,3 +43,6 @@ html {
     border-left: 3px solid #A7A7A7;
     color: #3C70A5;
 }
+.console-wrap {
+    display: none;
+}

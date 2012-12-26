@@ -54,6 +54,8 @@ define(function(require, exports) {
             var demo = baidu(this).val();
             baidu.get('./getdemo.php?demo=' + demo + '&component=' + baidu('#J_apiSelect').val(), function(data){
                 Editor.setEditorData(data);
+                // 清空控制台
+                Console.clear();
                 assets = data.assets;
                 baidu('#J_run').trigger('click');
             }, 'json');
@@ -73,7 +75,9 @@ define(function(require, exports) {
         initSelect();
         ExternalResource.init();
         Console.init();
-        
+        // 把Console挂到window下
+        window.Console = Console;
+
         baidu('#J_demoForm').submit(function(){
             Editor.synchronizeData();
 

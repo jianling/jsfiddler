@@ -45,5 +45,9 @@
         <script type="text/javascript">
             <?php echo $javascriptcode; ?>
         </script>
+        <script type="text/javascript">
+            // 劫持demo中定义的log
+            log = window.parent.Console.log;
+        </script>
     <body>
 </html>
