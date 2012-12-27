@@ -12,16 +12,19 @@ define(function(require, exports) {
     var getComponentsURL = 'http://tangram.baidu.com/magic/?m=demos&a=getComponents';
     var getDemosURL = 'http://tangram.baidu.com/magic/?m=demos&a=getDemos';
     var getDemoURL = 'http://tangram.baidu.com/magic/?m=demos&a=getDemo';
+    var demoAction = 'http://tangram.baidu.com/magic/?m=demos&a=demo';
     if(!/(tangram\.baidu\.com)/.test(window.location.href)){
         var getComponentsURL = 'http://tangram2.offline.bae.baidu.com/magic/?m=demos&a=getComponents';
         var getDemosURL = 'http://tangram2.offline.bae.baidu.com/magic/?m=demos&a=getDemos';
         var getDemoURL = 'http://tangram2.offline.bae.baidu.com/magic/?m=demos&a=getDemo';
+        var demoAction = 'http://tangram2.offline.bae.baidu.com/magic/?m=demos&a=demo';
     }
 
     if(/debug/.test(window.location.search)){
         var getComponentsURL = './getcomponents.php?';
         var getDemosURL = './getdemos.php?';
         var getDemoURL = './getdemo.php?';
+        var demoAction = './demo.php';
     }
 
     var initToolbar = function(){
@@ -176,5 +179,6 @@ define(function(require, exports) {
         appQuery = Tools.queryToJson(window.location.href);
         appQuery['lib'] && baidu('#J_frameworkSelect').val(appQuery['lib']);
         baidu('#J_frameworkSelect').trigger('change');
+        baidu('#J_demoForm').attr('action', demoAction);
     };
 });

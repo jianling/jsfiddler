@@ -34,6 +34,7 @@ html {
     color: #000;
     line-height: 1.5em;
     padding: 0;
+    margin: 0;
 }
 .magic-demo h3 {
     height: 30px;
@@ -44,6 +45,7 @@ html {
     color: #3C70A5;
     font-weight: bold;
     text-shadow: 0 0;
+    margin: 0;
 }
 .console-wrap {
     display: none;
