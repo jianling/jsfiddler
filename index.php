@@ -17,7 +17,7 @@
                     <li><a title="Run In New Window" id="J_runInNewWindow"  class="action-item action-run"><span>Run In New Window</span></a></li>
                     <li><a title="Reset all fields" id="J_reset"  class="action-item action-reset"><span>Reset</span></a></li>
                     <li><a title="Re-indent messy code" id="J_tidyup"  class="action-item action-tidyup"><span>TidyUp</span></a></li>
-                    <li><a title="Run jsLint on the code" id="J_jslint"  class="action-item action-jslint"><span>JSLint</span></a></li>
+                    <!-- <li><a title="Run jsLint on the code" id="J_jslint"  class="action-item action-jslint"><span>JSLint</span></a></li> -->
                 </ul>
             </div>
         </div>
