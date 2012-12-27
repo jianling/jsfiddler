@@ -14,6 +14,7 @@
             <div class="toolbar">
                 <ul class="actions">
                     <li><a title="Run (Control + Return)" id="J_run"  class="action-item action-run"><span>Run</span></a></li>
+                    <li><a title="Run In New Window" id="J_runInNewWindow"  class="action-item action-run"><span>Run In New Window</span></a></li>
                     <li><a title="Reset all fields" id="J_reset"  class="action-item action-reset"><span>Reset</span></a></li>
                     <li><a title="Re-indent messy code" id="J_tidyup"  class="action-item action-tidyup"><span>TidyUp</span></a></li>
                     <li><a title="Run jsLint on the code" id="J_jslint"  class="action-item action-jslint"><span>JSLint</span></a></li>
@@ -52,13 +53,13 @@
                     <p><input type="checkbox" id="J_languageZH" /><label for="J_languageZH" title="中文语言包">zh-CN</label></p>
                     <p><input type="checkbox" id="J_languageEN" /><label for="J_languageEN" title="中文语言包">en-US</label></p>
                 </div>
-                <!-- Develop Options -->
+                <!-- Develop Options
                 <h3 class="toggler active">Develop Options</h3>
                 <div class="sidebar-item develope-item">
                     <p><input type="checkbox" id="J_check" /><label for="J_check">参数检查</label></p>
                     <p><input type="checkbox" id="J_compatible" /><label for="J_compatible">兼容1.x</label></p>
                     <p><input type="checkbox" id="J_sizzle" /><label for="J_sizzle">完整版Sizzle</label></p>
-                </div>
+                </div> -->
             </div>
             <div class="col-main">
                 <div class="main-wrap">

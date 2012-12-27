@@ -30,6 +30,12 @@ define(function(require, exports) {
             baidu('#J_demoForm').submit();
         });
 
+        baidu('#J_runInNewWindow').click(function(){
+            baidu('#J_demoForm').attr('target', '_blank');
+            baidu('#J_demoForm').submit();
+            baidu('#J_demoForm').attr('target', 'demo');
+        });
+
         baidu('#J_reset').click(function(){
             Editor.reset();
         });
