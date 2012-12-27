@@ -6,6 +6,7 @@ define(function(require, exports) {
     var ExternalResource = require('ExternalResource');
 
     var assets = ''; // 存放demo里面的link和script部分
+    var appQuery = {}; // url后面的查询字段，用来自动跳转到某个demo
 
     // 判断环境
     var getComponentsURL = 'http://tangram.baidu.com/magic/?m=demos&a=getComponents';
@@ -62,6 +63,7 @@ define(function(require, exports) {
                         _options.push('<option value="' + item + '">' + item + '</option>');
                     });
                     baidu('#J_apiSelect').html(_options.join(''));
+                    appQuery['api'] && baidu('#J_apiSelect').val(appQuery['api']);
                     baidu('#J_apiSelect').trigger('change');
                 },
                 dataType: 'jsonp'
@@ -79,7 +81,7 @@ define(function(require, exports) {
                         _options.push('<option value="' + item + '">' + item + '</option>');
                     });
                     baidu('#J_demoSelect').html(_options.join(''));
-                    baidu('#J_demoSelect').val('quickStart.html');
+                    appQuery['demo'] ? baidu('#J_demoSelect').val(appQuery['demo']) : baidu('#J_demoSelect').val('quickStart.html');
                     baidu('#J_demoSelect').trigger('change');
                 },
                 dataType: 'jsonp'
@@ -171,6 +173,8 @@ define(function(require, exports) {
         //     baidu('#J_frameworkSelect').html(_options.join(''));
         // }, 'json');
         
+        appQuery = Tools.queryToJson(window.location.href);
+        appQuery['lib'] && baidu('#J_frameworkSelect').val(appQuery['lib']);
         baidu('#J_frameworkSelect').trigger('change');
     };
 });

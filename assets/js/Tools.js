@@ -142,5 +142,28 @@ define(function(require, exports) {
      
     };
 
+    var queryToJson = function(url){
+        var params = url.substr(url.lastIndexOf('?') + 1).split('&'),
+            len = params.length,
+            ret = null, entry, key, val;
+        for(var i = 0; i < len; i++){
+            entry = params[i].split('=');
+            if(entry.length < 2){continue;}
+            !ret && (ret = {});
+            key = entry[0];
+            val = entry[1];
+            entry = ret[key];
+            if(!entry){
+                ret[key] = val;
+            }else if(Object.prototype.toString.call(entry) == '[object Array]'){
+                entry.push(val);
+            }else{// 这里只可能是string了
+                ret[key] = [entry, val];
+            }
+        }
+        return ret;
+    };
+
     exports.Base64 = Base64;
+    exports.queryToJson = queryToJson;
 });
