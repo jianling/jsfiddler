@@ -46,8 +46,13 @@
             <?php echo $javascriptcode; ?>
         </script>
         <script type="text/javascript">
+
             // 劫持demo中定义的log
-            log = window.parent.Console.log;
+            if(window.parent.Console){
+                log = window.parent.Console.log;
+            }else{
+                baidu('.console-wrap').show();
+            }
         </script>
     <body>
 </html>

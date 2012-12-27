@@ -36,7 +36,7 @@ html {
     padding: 0;
     margin: 0;
 }
-.magic-demo h3 {
+.magic-demo .demo-wrap h3 {
     height: 30px;
     background-color: #EBEBEB;
     line-height: 30px;
