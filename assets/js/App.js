@@ -176,7 +176,7 @@ define(function(require, exports) {
         //     baidu('#J_frameworkSelect').html(_options.join(''));
         // }, 'json');
         
-        appQuery = Tools.queryToJson(window.location.href);
+        appQuery = Tools.queryToJson(window.location.href) || {};
         appQuery['lib'] && baidu('#J_frameworkSelect').val(appQuery['lib']);
         baidu('#J_frameworkSelect').trigger('change');
         baidu('#J_demoForm').attr('action', demoAction);
