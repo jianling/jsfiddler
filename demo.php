@@ -5,6 +5,7 @@
     $assets = base64_decode($_POST['assets']);
     $resource = base64_decode($_POST['resource']);
     $lib = base64_decode($_POST['lib']);
+    $language = $_POST['language'];
 
     $server_base = 'http://'.$_SERVER['SERVER_NAME'].$_SERVER['SCRIPT_NAME'];
     $server_base = preg_replace('/jsfiddler\/demo.php/', '', $server_base);
@@ -15,6 +16,12 @@
     }else{
         $body_classname = 'magic-demo';
         $framework_dir = $server_base.'MagicCube/';
+    }
+
+    if($language == 'en-US'){
+        $language = '<script type="text/javascript" src="http://localhost/tangram2/src/import.php?f=baidu.i18n.cultures.en-US"></script>';
+    }else{
+        $language = '<script type="text/javascript" src="http://localhost/tangram2/src/import.php?f=baidu.i18n.cultures.zh-CN"></script>';
     }
 
     // $htmlcode = preg_replace(array('/\\\\"/', '/\\\\\'/'), array('"', "'"), $htmlcode);
@@ -35,6 +42,7 @@
         <title>Tangram & Magic online Demos</title>
         <?php echo $assets; ?>
         <?php echo $resource; ?>
+        <?php echo $language; ?>
         <link rel="stylesheet" type="text/css" href="./assets/css/demobeautify.css" />
         <style type="text/css">
             <?php echo $csscode; ?>

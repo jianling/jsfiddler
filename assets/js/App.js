@@ -155,6 +155,14 @@ define(function(require, exports) {
 
             var libField = baidu('#J_lib')[0];
             libField.value = Tools.Base64.encode(libField.value);
+
+            var languageField = baidu('#J_language')[0];
+            languageField.value = '';
+            if(baidu('#J_languageEN')[0].checked){
+                languageField.value = 'en-US';
+            }else{
+                languageField.value = 'zh-CN';
+            }
         });
 
         // baidu.get('./getversions.php', function(versions){
