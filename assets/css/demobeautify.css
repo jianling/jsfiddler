@@ -1,6 +1,9 @@
 html {
     overflow: visible;
 }
+body.no-scroll {
+    overflow-y: auto;
+}
 
 /* tangram demo */
 .tangram-demo {

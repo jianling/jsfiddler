@@ -246,7 +246,8 @@ body {
 }
 #J_externalResources,
 #J_assets,
-#J_lib {
+#J_lib,
+#J_language {
 	display: none;
 }
 
