@@ -26,6 +26,7 @@ body {
 .hd {
 	height: 44px;
 	background: #3D668F url(../img/top-bg.png) 0 0 repeat-x;
+	overflow: hidden;
 }
 .logo {
 	float: left;
@@ -74,7 +75,9 @@ body {
 .action-jslint span {
 	background-position: 8px -338px;
 }
-
+.action-share span {
+	background-position: 8px -371px;
+}
 .col-sub {
 	width: 220px;
 	background-color: #FFF;
@@ -201,13 +204,15 @@ body {
 	/*position: fixed;
 	bottom: 0;
 	left: 230px;*/
-	min-width: 800px;
-	min-height: 300px;
+	position: relative;
+	/*min-width: 800px;
+	min-height: 300px;*/
 	background-color: #FFF;
 	border: 1px solid #E1E1E1;
 	border-width: 1px 0 1px 1px;
 }
 #J_editor .tab {
+	height: 30px;
 	background-color: #F7F7F7;
 	padding-left: 29px;
 	*zoom: 1;
@@ -284,4 +289,14 @@ body {
 .console-wrap .info {
 	background-color: #89D;
 	margin-right: 5px;
+}
+#J_fullScreen {
+	position: absolute;
+	left: 8px;
+	top: 8px;
+	display: block;
+	height: 14px;
+	width: 15px;
+	background: url(../img/sprites.png) no-repeat 0 -120px;
+	cursor: pointer;
 }

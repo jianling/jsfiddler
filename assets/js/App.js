@@ -3,6 +3,7 @@ define(function(require, exports) {
     var Editor = require('Editor');
     var Tools = require('Tools');
     var Console = require('Console');
+    var Helper = require('Helper');
     var ExternalResource = require('ExternalResource');
 
     var assets = ''; // 存放demo里面的link和script部分
@@ -122,6 +123,7 @@ define(function(require, exports) {
         Console.init();
         // 把Console挂到window下
         window.Console = Console;
+        Helper.init();
 
         baidu('#J_demoForm').submit(function(){
             Editor.synchronizeData();

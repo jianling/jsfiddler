@@ -1,5 +1,5 @@
 html {
-    overflow: visible;
+    overflow: auto;
 }
 body.no-scroll {
     overflow-y: auto;
@@ -22,6 +22,7 @@ body.no-scroll {
 .magic-demo {
     padding: 10px;
     font-size: 12px;
+    min-height: auto;
 }
 .magic-demo .demo-list {
     display: none;
