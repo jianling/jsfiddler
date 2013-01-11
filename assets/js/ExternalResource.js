@@ -3,6 +3,19 @@ define(function(require, exports) {
 
     var externalResources = [];
 
+    var addResource = function(url){
+        externalResources.push({
+            'url': url,
+            'enable': true
+        });
+        var _split = url.split('/');
+        var filename = _split[_split.length - 1];
+        var _resource = '<li resourceid="' + (externalResources.length - 1) + '"><a class="resource-item" href="' + url + '" title="' + url + '" target="_blank">' + filename + '</a><a class="remove" title="删除该资源" action="remove"></a><a class="enable-toggler enable" title="启用该资源" action="enable"></a></li>';
+
+        baidu('#J_externalResourcesList').insertHTML('beforeEnd', _resource);
+        baidu('#J_externalResource').val('');
+    };
+
     var init = function(){
         baidu('#J_addExternalResource').click(function(){
             var url = baidu('#J_externalResource').val();
@@ -11,16 +24,7 @@ define(function(require, exports) {
                 return;
             }
 
-            externalResources.push({
-                'url': url,
-                'enable': true
-            });
-            var _split = url.split('/');
-            var filename = _split[_split.length - 1];
-            var _resource = '<li resourceid="' + (externalResources.length - 1) + '"><a class="resource-item" href="' + url + '" title="' + url + '" target="_blank">' + filename + '</a><a class="remove" title="删除该资源" action="remove"></a><a class="enable-toggler enable" title="启用该资源" action="enable"></a></li>';
-
-            baidu('#J_externalResourcesList').insertHTML('beforeEnd', _resource);
-            baidu('#J_externalResource').val('');
+            addResource(url);
         });
 
         baidu('#J_externalResourcesList').click(function(e){
@@ -61,4 +65,5 @@ define(function(require, exports) {
 
     exports.init = init;
     exports.getEnableResources = getEnableResources;
+    exports.addResource = addResource;
 });

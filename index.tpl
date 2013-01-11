@@ -28,6 +28,7 @@
                 <div class="sidebar-item">
                     <div class="tip" id="J_tip">当前Magic使用的Tangram版本为2.0.1.2纯净版</div>
                     <select id="J_frameworkSelect">
+                        <option value="">choose framework</option>
                         <option value="tangram">Tangram</option>
                         <option value="magic">Magic</option>
                     </select>

@@ -14,18 +14,25 @@ define(function(require, exports) {
     var getDemosURL = 'http://tangram.baidu.com/magic/?m=demos&a=getDemos';
     var getDemoURL = 'http://tangram.baidu.com/magic/?m=demos&a=getDemo';
     var demoAction = 'http://tangram.baidu.com/magic/?m=demos&a=demo';
+    var shareAction = 'http://tangram.baidu.com/magic/?m=demos&a=saveShare';
+    var getshareAction = 'http://tangram.baidu.com/magic/?m=demos&a=getShare';
+    var appURL = 'http://tangram.baidu.com/jsfiddler';
     if(!/(tangram\.baidu\.com)/.test(window.location.href)){
         var getComponentsURL = 'http://tangram2.offline.bae.baidu.com/magic/?m=demos&a=getComponents';
         var getDemosURL = 'http://tangram2.offline.bae.baidu.com/magic/?m=demos&a=getDemos';
         var getDemoURL = 'http://tangram2.offline.bae.baidu.com/magic/?m=demos&a=getDemo';
         var demoAction = 'http://tangram2.offline.bae.baidu.com/magic/?m=demos&a=demo';
+        var shareAction = 'http://tangram2.offline.bae.baidu.com/magic/?m=demos&a=saveShare';
+        var getshareAction = 'http://tangram2.offline.bae.baidu.com/magic/?m=demos&a=getShare';
+        var appURL = 'http://tangram2.offline.bae.baidu.com/jsfiddler';
     }
 
-    if(/debug/.test(window.location.search)){
+    if(/localhost/.test(window.location.search)){
         var getComponentsURL = './getcomponents.php?';
         var getDemosURL = './getdemos.php?';
         var getDemoURL = './getdemo.php?';
         var demoAction = './demo.php';
+        var appURL = 'http://localhost/jsfiddler';
     }
 
     var initToolbar = function(){
@@ -48,6 +55,33 @@ define(function(require, exports) {
         baidu('#J_tidyup').click(function(){
             Editor.tidyup();
         });
+
+        baidu('#J_share').click(function(){
+            prepareSubmit();
+            baidu.ajax(shareAction, {
+                'async': false,
+                'type': 'POST',
+                'dataType': 'json',
+                'data': {
+                    'html': Editor.getEditor().html.getInputField().value,
+                    'css': Editor.getEditor().css.getInputField().value,
+                    'javascript': Editor.getEditor().javascript.getInputField().value,
+                    'assets': baidu('#J_assets')[0].value,
+                    'resource': baidu('#J_externalResources')[0].value,
+                    'lib': baidu('#J_lib')[0].value,
+                    'api': Tools.Base64.encode(baidu('#J_apiSelect').val()),
+                    'demo': Tools.Base64.encode(baidu('#J_demoSelect').val()),
+                    'language': baidu('#J_language')[0].value
+                },
+                'success': function(data){
+                    // console.log(data.hash);
+                    window.location.href = appURL + '?hash=' + data.hash;
+                },
+                'error': function(){
+                    alert('分享失败，请重试！');
+                }
+            });
+        });
     };
 
     var initSelect = function(){
@@ -57,8 +91,10 @@ define(function(require, exports) {
 
             if(lib == 'tangram'){
                 baidu('#J_tip').hide();
-            }else{
+            }else if(lib == 'magic'){
                 baidu('#J_tip').show();
+            }else{
+                return;
             }
             baidu.ajax(getComponentsURL + '&lib=' + lib, {
                 success: function(components){
@@ -67,7 +103,7 @@ define(function(require, exports) {
                         _options.push('<option value="' + item + '">' + item + '</option>');
                     });
                     baidu('#J_apiSelect').html(_options.join(''));
-                    appQuery['api'] && baidu('#J_apiSelect').val(appQuery['api']);
+                    appQuery['api'] && baidu('#J_apiSelect').val(appQuery['api']) && (delete appQuery['api']);
                     baidu('#J_apiSelect').trigger('change');
                 },
                 dataType: 'jsonp'
@@ -85,8 +121,14 @@ define(function(require, exports) {
                         _options.push('<option value="' + item + '">' + item + '</option>');
                     });
                     baidu('#J_demoSelect').html(_options.join(''));
-                    appQuery['demo'] ? baidu('#J_demoSelect').val(appQuery['demo']) : baidu('#J_demoSelect').val('quickStart.html');
+                    if(appQuery['demo']){
+                        baidu('#J_demoSelect').val(appQuery['demo']);
+                        delete appQuery['demo'];
+                    }else{
+                        baidu('#J_demoSelect').val('quickStart.html');
+                    }
                     baidu('#J_demoSelect').trigger('change');
+                    
                 },
                 dataType: 'jsonp'
             });
@@ -97,7 +139,22 @@ define(function(require, exports) {
             var lib = baidu('#J_frameworkSelect').val();
             baidu.ajax(getDemoURL + '&demo=' + demo + '&component=' + baidu('#J_apiSelect').val() + '&lib=' + lib, {
                 success: function(data){
-                    Editor.setEditorData(data);
+                    if(appQuery['fromshare']){
+                        delete appQuery['fromshare'];
+                        Editor.setEditorData(appQuery);
+
+                        appQuery['language'] == 'en-US' && (baidu('#J_languageEN')[0].checked = true);
+
+                        var str = appQuery['resource'];
+                        var patt = new RegExp('(http[^"]*)"',"g");
+                        var result;
+                        while ((result = patt.exec(str)) != null)  {
+                            ExternalResource.addResource(result[1]);
+                        }
+                    }else{
+                        Editor.setEditorData(data);
+                    }
+                    
                     // 清空控制台
                     Console.clear();
                     assets = data.assets;
@@ -110,6 +167,48 @@ define(function(require, exports) {
 
     var autoFixIframe = function(){
         baidu('#J_demoIframe').css('width', baidu(window).width() - 230 - 1);
+    };
+
+    var prepareSubmit = function(){
+        Editor.synchronizeData();
+
+        // var data = Editor.getEditorData();
+        var resources = ExternalResource.getEnableResources();
+        var imports = [];
+        for(var i = 0; i < resources.length; i++){
+            /.css$/.test(resources[i].url) ? imports.push('<link rel="stylesheet" type="text/css" href="' + resources[i].url + '" />') : 
+                                         imports.push('<script type="text/javascript" src="' + resources[i].url + '"></script>');
+        }
+
+        baidu('#J_externalResources').val(imports.join(''));
+        baidu('#J_lib').val(baidu('#J_frameworkSelect').val());
+
+        // base64编码
+        var htmlField = Editor.getEditor().html.getInputField();
+        htmlField.value = Tools.Base64.encode(htmlField.value);
+
+        var cssField = Editor.getEditor().css.getInputField();
+        cssField.value = Tools.Base64.encode(cssField.value);
+        
+        var javascriptField = Editor.getEditor().javascript.getInputField();
+        javascriptField.value = Tools.Base64.encode(javascriptField.value);
+
+        var resourceField = baidu('#J_externalResources')[0];
+        resourceField.value = Tools.Base64.encode(resourceField.value);
+
+        var assetsField = baidu('#J_assets')[0];
+        assetsField.value = Tools.Base64.encode(assets);
+
+        var libField = baidu('#J_lib')[0];
+        libField.value = Tools.Base64.encode(libField.value);
+
+        var languageField = baidu('#J_language')[0];
+        languageField.value = '';
+        if(baidu('#J_languageEN')[0].checked){
+            languageField.value = Tools.Base64.encode('en-US');
+        }else{
+            languageField.value = Tools.Base64.encode('zh-CN');
+        }
     };
 
     exports.run = function(){
@@ -126,45 +225,7 @@ define(function(require, exports) {
         Helper.init();
 
         baidu('#J_demoForm').submit(function(){
-            Editor.synchronizeData();
-
-            // var data = Editor.getEditorData();
-            var resources = ExternalResource.getEnableResources();
-            var imports = [];
-            for(var i = 0; i < resources.length; i++){
-                /.css$/.test(resources[i].url) ? imports.push('<link rel="stylesheet" type="text/css" href="' + resources[i].url + '" />') : 
-                                             imports.push('<script type="text/javascript" src="' + resources[i].url + '"></script>');
-            }
-
-            baidu('#J_externalResources').val(imports.join(''));
-            baidu('#J_lib').val(baidu('#J_frameworkSelect').val());
-
-            // base64编码
-            var htmlField = Editor.getEditor().html.getInputField();
-            htmlField.value = Tools.Base64.encode(htmlField.value);
-
-            var cssField = Editor.getEditor().css.getInputField();
-            cssField.value = Tools.Base64.encode(cssField.value);
-            
-            var javascriptField = Editor.getEditor().javascript.getInputField();
-            javascriptField.value = Tools.Base64.encode(javascriptField.value);
-
-            var resourceField = baidu('#J_externalResources')[0];
-            resourceField.value = Tools.Base64.encode(resourceField.value);
-
-            var assetsField = baidu('#J_assets')[0];
-            assetsField.value = Tools.Base64.encode(assets);
-
-            var libField = baidu('#J_lib')[0];
-            libField.value = Tools.Base64.encode(libField.value);
-
-            var languageField = baidu('#J_language')[0];
-            languageField.value = '';
-            if(baidu('#J_languageEN')[0].checked){
-                languageField.value = 'en-US';
-            }else{
-                languageField.value = 'zh-CN';
-            }
+            prepareSubmit();
         });
 
         // baidu.get('./getversions.php', function(versions){
@@ -187,8 +248,22 @@ define(function(require, exports) {
         // }, 'json');
         
         appQuery = Tools.queryToJson(window.location.href) || {};
+        baidu('#J_demoForm').attr('action', demoAction);
+
+        // 如果url中存在分享hash，直接取分享的代码
+        if(/hash=/.test(location.href)){
+            baidu.ajax(getshareAction + '&hash=' + appQuery['hash'], {
+                success: function(data){
+                    appQuery = data;
+                    appQuery['fromshare'] = true;
+                    appQuery['lib'] && baidu('#J_frameworkSelect').val(appQuery['lib']) && (delete appQuery['lib']);
+                    baidu('#J_frameworkSelect').trigger('change');
+                },
+                dataType: 'jsonp'
+            });
+        }
         appQuery['lib'] && baidu('#J_frameworkSelect').val(appQuery['lib']);
         baidu('#J_frameworkSelect').trigger('change');
-        baidu('#J_demoForm').attr('action', demoAction);
+        
     };
 });
