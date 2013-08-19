@@ -51,16 +51,17 @@ sumeru = pohoneGap = 原生浏览器
 
 sumeru > pohoneGap = 原生浏览器
 
-## [V8 Benchmark](http://octane-benchmark.googlecode.com/svn/latest/index.html)
+## [Canvas Performance Test(fps越大，性能越好)](http://www.smashcat.org/av/canvas_test/)
+
 <table>
-    <tr><td>sumeru</td><td>796</td></tr>
-    <tr><td>phoneGap</td><td>695</td></tr>
-    <tr><td>原生浏览器</td><td>705</td></tr>
+    <tr><td>sumeru</td><td>13fps</td></tr>
+    <tr><td>phoneGap</td><td>3fps</td></tr>
+    <tr><td>原生浏览器</td><td>3~4fps</td></tr>
 </table>
 
-sumeru > 原生浏览器 > pohoneGap
+sumeru > pohoneGap > 原生浏览器
 
-## [CSS3 Layout Performance Test](http://ie.microsoft.com/testdrive/performance/mazesolver)
+## [CSS3 Layout Performance Test(值越小，css3布局性能越强)](http://ie.microsoft.com/testdrive/performance/mazesolver)
 
 <table>
     <tr><td>sumeru</td><td>110s</td></tr>
@@ -70,7 +71,17 @@ sumeru > 原生浏览器 > pohoneGap
 
 sumeru > pohoneGap > 原生浏览器
 
-## [Javascript Raytracer(Basic Render)](http://nontroppo.org/timer/progressive_raytracer.html)
+
+## [V8 Benchmark(数值越大，得分越高)](http://octane-benchmark.googlecode.com/svn/latest/index.html)
+<table>
+    <tr><td>sumeru</td><td>796</td></tr>
+    <tr><td>phoneGap</td><td>695</td></tr>
+    <tr><td>原生浏览器</td><td>705</td></tr>
+</table>
+
+sumeru > 原生浏览器 > pohoneGap
+
+## [Javascript Raytracer(Basic Render)(值越小，javascript计算能力越强)](http://nontroppo.org/timer/progressive_raytracer.html)
 
 <table>
 	<tr><th>测试目标</th><th>第一次</th><th>第二次</th><th>第三次</th></tr>
@@ -81,22 +92,12 @@ sumeru > pohoneGap > 原生浏览器
 
 sumeru > pohoneGap > 原生浏览器
 
-## [Mesh Transform Benchmark](http://www.webkit.org/misc/morph.html)
+## [Mesh Transform Benchmark(值越小，javascript计算能力越强)](http://www.webkit.org/misc/morph.html)
 
 <table>
     <tr><td>sumeru</td><td>161ms</td></tr>
     <tr><td>phoneGap</td><td>377ms</td></tr>
     <tr><td>原生浏览器</td><td>390ms</td></tr>
-</table>
-
-sumeru > pohoneGap > 原生浏览器
-
-## [Canvas Performance Test](http://www.smashcat.org/av/canvas_test/)
-
-<table>
-    <tr><td>sumeru</td><td>13fps</td></tr>
-    <tr><td>phoneGap</td><td>3fps</td></tr>
-    <tr><td>原生浏览器</td><td>3~4fps</td></tr>
 </table>
 
 sumeru > pohoneGap > 原生浏览器
