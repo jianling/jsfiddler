@@ -13,7 +13,7 @@
     <tr><td>原生浏览器</td><td>431/500</td></tr>
 </table>
 
-T5 > pohoneGap > 原生浏览器
+T5 > phoneGap > 原生浏览器
 
 ## [CSS3支持性检测](http://css3test.com)
 <table>
@@ -22,7 +22,7 @@ T5 > pohoneGap > 原生浏览器
     <tr><td>原生浏览器</td><td>49%</td></tr>
 </table>
 
-T5 = pohoneGap = 原生浏览器
+T5 = phoneGap = 原生浏览器
 
 ## [CSS3选择器支持性检测](http://tools.css3.info/selectors-test/test.html)
 <table>
@@ -31,7 +31,7 @@ T5 = pohoneGap = 原生浏览器
     <tr><td>原生浏览器</td><td>574/574</td></tr>
 </table>
 
-T5 < pohoneGap = 原生浏览器
+T5 < phoneGap = 原生浏览器
 
 ## [Acid3检测](http://acid3.acidtests.org)
 <table>
@@ -40,7 +40,7 @@ T5 < pohoneGap = 原生浏览器
     <tr><td>原生浏览器</td><td>100(满分)</td></tr>
 </table>
 
-T5 = pohoneGap = 原生浏览器
+T5 = phoneGap = 原生浏览器
 
 ## [JavaScript符合性检测](http://test262.ecmascript.org/default.html)
 <table>
@@ -49,7 +49,7 @@ T5 = pohoneGap = 原生浏览器
     <tr><td>原生浏览器</td><td>--</td></tr>
 </table>
 
-T5 > pohoneGap = 原生浏览器
+T5 > phoneGap = 原生浏览器
 
 ## [Canvas Performance Test(fps越大，性能越好)](http://www.smashcat.org/av/canvas_test/)
 
@@ -59,7 +59,7 @@ T5 > pohoneGap = 原生浏览器
     <tr><td>原生浏览器</td><td>3~4fps</td></tr>
 </table>
 
-T5 > pohoneGap > 原生浏览器
+T5 > phoneGap > 原生浏览器
 
 ## [CSS3 Layout Performance Test(值越小，css3布局性能越强)](http://ie.microsoft.com/testdrive/performance/mazesolver)
 
@@ -69,7 +69,7 @@ T5 > pohoneGap > 原生浏览器
     <tr><td>原生浏览器</td><td>330s</td></tr>
 </table>
 
-T5 > pohoneGap > 原生浏览器
+T5 > phoneGap > 原生浏览器
 
 
 ## [V8 Benchmark(数值越大，得分越高)](http://octane-benchmark.googlecode.com/svn/latest/index.html)
@@ -79,7 +79,7 @@ T5 > pohoneGap > 原生浏览器
     <tr><td>原生浏览器</td><td>705</td></tr>
 </table>
 
-T5 > 原生浏览器 > pohoneGap
+T5 > 原生浏览器 > phoneGap
 
 ## [Javascript Raytracer(Basic Render)(值越小，javascript计算能力越强)](http://nontroppo.org/timer/progressive_raytracer.html)
 
@@ -90,7 +90,7 @@ T5 > 原生浏览器 > pohoneGap
     <tr><td>原生浏览器</td><td>15.308s</td><td>48.905s</td><td>73.793s</td></tr>
 </table>
 
-T5 > pohoneGap > 原生浏览器
+T5 > phoneGap > 原生浏览器
 
 ## [Mesh Transform Benchmark(值越小，javascript计算能力越强)](http://www.webkit.org/misc/morph.html)
 
@@ -100,7 +100,7 @@ T5 > pohoneGap > 原生浏览器
     <tr><td>原生浏览器</td><td>390ms</td></tr>
 </table>
 
-T5 > pohoneGap > 原生浏览器
+T5 > phoneGap > 原生浏览器
 
 
 以上测试，除了css3选择器 T5内核比phoneGap和原生浏览器略差以外，其他测试项全部优于phoneGap和原生浏览器。
