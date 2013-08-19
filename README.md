@@ -69,3 +69,34 @@ sumeru > 原生浏览器 > pohoneGap
 </table>
 
 sumeru > pohoneGap > 原生浏览器
+
+## [Javascript Raytracer(Basic Render)](http://nontroppo.org/timer/progressive_raytracer.html)
+
+<table>
+	<tr><th>测试目标</th><th>第一次</th><th>第二次</th><th>第三次</th></tr>
+    <tr><td>sumeru</td><td>4.508s</td><td>11.778s</td><td>19.275s</td></tr>
+    <tr><td>phoneGap</td><td>13.869s</td><td>41.68s</td><td>65.898s</td></tr>
+    <tr><td>原生浏览器</td><td>15.308s</td><td>48.905s</td><td>73.793s</td></tr>
+</table>
+
+sumeru > pohoneGap > 原生浏览器
+
+## [Mesh Transform Benchmark](http://www.webkit.org/misc/morph.html)
+
+<table>
+    <tr><td>sumeru</td><td>161ms</td></tr>
+    <tr><td>phoneGap</td><td>377ms</td></tr>
+    <tr><td>原生浏览器</td><td>390ms</td></tr>
+</table>
+
+sumeru > pohoneGap > 原生浏览器
+
+## [Canvas Performance Test](http://www.smashcat.org/av/canvas_test/)
+
+<table>
+    <tr><td>sumeru</td><td>13fps</td></tr>
+    <tr><td>phoneGap</td><td>3fps</td></tr>
+    <tr><td>原生浏览器</td><td>3~4fps</td></tr>
+</table>
+
+sumeru > pohoneGap > 原生浏览器
