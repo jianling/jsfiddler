@@ -14,7 +14,7 @@
     <tr><td>Chrome Beta</td><td>429/500</td></tr>
 </table>
 
-T5 > phoneGap > 原生浏览器
+T5 > 原生浏览器 > Chrome Beta > phoneGap
 
 ## [CSS3支持性检测](http://css3test.com)
 <table>
@@ -24,7 +24,7 @@ T5 > phoneGap > 原生浏览器
     <tr><td>Chrome Beta</td><td>66%</td></tr>
 </table>
 
-T5 = phoneGap = 原生浏览器
+Chrome > T5 = phoneGap = 原生浏览器
 
 ## [CSS3选择器支持性检测](http://tools.css3.info/selectors-test/test.html)
 <table>
@@ -34,7 +34,7 @@ T5 = phoneGap = 原生浏览器
     <tr><td>Chrome Beta</td><td>574/574</td></tr>
 </table>
 
-T5 < phoneGap = 原生浏览器
+T5 < phoneGap = 原生浏览器 = Chrome Beta
 
 ## [Acid3检测](http://acid3.acidtests.org)
 <table>
@@ -44,7 +44,7 @@ T5 < phoneGap = 原生浏览器
     <tr><td>Chrome Beta</td><td>100(满分)</td></tr>
 </table>
 
-T5 = phoneGap = 原生浏览器
+T5 = phoneGap = 原生浏览器 = Chrome Beta
 
 ## [JavaScript符合性检测](http://test262.ecmascript.org/default.html)
 <table>
@@ -64,7 +64,7 @@ T5 > phoneGap = 原生浏览器
     <tr><td>Chrome Beta</td><td>8fps</td></tr>
 </table>
 
-T5 > phoneGap > 原生浏览器
+T5 > Chrome Beta > 原生浏览器 > phoneGap
 
 ## [CSS3 Layout Performance Test(值越小，css3布局性能越强)](http://ie.microsoft.com/testdrive/performance/mazesolver)
 
@@ -75,7 +75,7 @@ T5 > phoneGap > 原生浏览器
     <tr><td>Chrome Beta</td><td>178s</td></tr>
 </table>
 
-T5 > phoneGap > 原生浏览器
+T5 > Chrome Beta > phoneGap > 原生浏览器
 
 
 ## [V8 Benchmark(数值越大，得分越高)](http://octane-benchmark.googlecode.com/svn/latest/index.html)
@@ -86,7 +86,7 @@ T5 > phoneGap > 原生浏览器
     <tr><td>Chrome Beta</td><td>651</td></tr>
 </table>
 
-T5 > 原生浏览器 > phoneGap
+T5 > 原生浏览器 > phoneGap > Chrome Beta
 
 ## [Javascript Raytracer(Basic Render)(值越小，javascript计算能力越强)](http://nontroppo.org/timer/progressive_raytracer.html)
 
@@ -98,7 +98,7 @@ T5 > 原生浏览器 > phoneGap
     <tr><td>Chrome Beta</td><td>12.035s</td><td>31.782s</td><td>57.851s</td></tr>
 </table>
 
-T5 > phoneGap > 原生浏览器
+T5 > Chrome Beta > phoneGap > 原生浏览器
 
 ## [Mesh Transform Benchmark(值越小，javascript计算能力越强)](http://www.webkit.org/misc/morph.html)
 
@@ -109,7 +109,7 @@ T5 > phoneGap > 原生浏览器
     <tr><td>Chrome Beta</td><td>178ms</td></tr>
 </table>
 
-T5 > phoneGap > 原生浏览器
+T5 > Chrome Beta > phoneGap > 原生浏览器
 
 
 以上测试，除了css3选择器 T5内核比phoneGap和原生浏览器略差以外，其他测试项全部优于phoneGap和原生浏览器。
