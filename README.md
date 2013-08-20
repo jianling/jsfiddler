@@ -2,8 +2,8 @@
 
 ## 测试环境
 <table>
-    <tr><td>机型</td><td>SAMSUNG</td></tr>
-    <tr><td>系统</td><td>Andriod 4.0.3</td></tr>
+    <tr><td>机型</td><td>SAMSUNG GT-S7562i</td></tr>
+    <tr><td>系统</td><td>Andriod 4.0.4</td></tr>
 </table>
 
 ## [HTML5支持性检测](http://html5test.com)
@@ -46,7 +46,7 @@ T5 = phoneGap = 原生浏览器
 <table>
     <tr><td>T5</td><td>Pase:11561 Fail:17</td></tr>
     <tr><td>phoneGap</td><td>Pase:11553 Fail:25</td></tr>
-    <tr><td>原生浏览器</td><td>--</td></tr>
+    <tr><td>原生浏览器</td><td>Pase:11553 Fail:25</td></tr>
 </table>
 
 T5 > phoneGap = 原生浏览器
