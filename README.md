@@ -11,6 +11,7 @@
     <tr><td>T5</td><td>470/500</td></tr>
     <tr><td>phoneGap</td><td>416/500</td></tr>
     <tr><td>原生浏览器</td><td>431/500</td></tr>
+    <tr><td>Chrome Beta</td><td>429/500</td></tr>
 </table>
 
 T5 > phoneGap > 原生浏览器
@@ -20,6 +21,7 @@ T5 > phoneGap > 原生浏览器
     <tr><td>T5</td><td>49%</td></tr>
     <tr><td>phoneGap</td><td>49%</td></tr>
     <tr><td>原生浏览器</td><td>49%</td></tr>
+    <tr><td>Chrome Beta</td><td>66%</td></tr>
 </table>
 
 T5 = phoneGap = 原生浏览器
@@ -29,6 +31,7 @@ T5 = phoneGap = 原生浏览器
     <tr><td>T5</td><td>558/574</td></tr>
     <tr><td>phoneGap</td><td>574/574</td></tr>
     <tr><td>原生浏览器</td><td>574/574</td></tr>
+    <tr><td>Chrome Beta</td><td>574/574</td></tr>
 </table>
 
 T5 < phoneGap = 原生浏览器
@@ -38,6 +41,7 @@ T5 < phoneGap = 原生浏览器
     <tr><td>T5</td><td>100(满分)</td></tr>
     <tr><td>phoneGap</td><td>100(满分)</td></tr>
     <tr><td>原生浏览器</td><td>100(满分)</td></tr>
+    <tr><td>Chrome Beta</td><td>100(满分)</td></tr>
 </table>
 
 T5 = phoneGap = 原生浏览器
@@ -57,6 +61,7 @@ T5 > phoneGap = 原生浏览器
     <tr><td>T5</td><td>13fps</td></tr>
     <tr><td>phoneGap</td><td>3fps</td></tr>
     <tr><td>原生浏览器</td><td>3~4fps</td></tr>
+    <tr><td>Chrome Beta</td><td>8fps</td></tr>
 </table>
 
 T5 > phoneGap > 原生浏览器
@@ -67,6 +72,7 @@ T5 > phoneGap > 原生浏览器
     <tr><td>T5</td><td>110s</td></tr>
     <tr><td>phoneGap</td><td>294s</td></tr>
     <tr><td>原生浏览器</td><td>330s</td></tr>
+    <tr><td>Chrome Beta</td><td>178s</td></tr>
 </table>
 
 T5 > phoneGap > 原生浏览器
@@ -77,6 +83,7 @@ T5 > phoneGap > 原生浏览器
     <tr><td>T5</td><td>796</td></tr>
     <tr><td>phoneGap</td><td>695</td></tr>
     <tr><td>原生浏览器</td><td>705</td></tr>
+    <tr><td>Chrome Beta</td><td>651</td></tr>
 </table>
 
 T5 > 原生浏览器 > phoneGap
@@ -88,6 +95,7 @@ T5 > 原生浏览器 > phoneGap
     <tr><td>T5</td><td>4.508s</td><td>11.778s</td><td>19.275s</td></tr>
     <tr><td>phoneGap</td><td>13.869s</td><td>41.68s</td><td>65.898s</td></tr>
     <tr><td>原生浏览器</td><td>15.308s</td><td>48.905s</td><td>73.793s</td></tr>
+    <tr><td>Chrome Beta</td><td>12.035s</td><td>31.782s</td><td>57.851s</td></tr>
 </table>
 
 T5 > phoneGap > 原生浏览器
@@ -98,6 +106,7 @@ T5 > phoneGap > 原生浏览器
     <tr><td>T5</td><td>161ms</td></tr>
     <tr><td>phoneGap</td><td>377ms</td></tr>
     <tr><td>原生浏览器</td><td>390ms</td></tr>
+    <tr><td>Chrome Beta</td><td>178ms</td></tr>
 </table>
 
 T5 > phoneGap > 原生浏览器
