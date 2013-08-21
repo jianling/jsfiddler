@@ -18,8 +18,6 @@
     <tr><td>Chrome Beta</td><td>429/500</td><td>429/500</td><td>410/500</td><td>344/500</td></tr>
 </table>
 
-T5 > 原生浏览器 > Chrome Beta > phoneGap
-
 ## [CSS3支持性检测](http://css3test.com)
 <table>
     <tr><th>机型</th><th>SAMSUNG GT-S7562i</th><th>魅族MX M031</th><th>Google Nexus 7(二代)</th><th>iPad 2</th></tr>
@@ -28,8 +26,6 @@ T5 > 原生浏览器 > Chrome Beta > phoneGap
     <tr><td>原生浏览器</td><td>49%</td><td>48%</td><td>48%</td><td>51%</td></tr>
     <tr><td>Chrome Beta</td><td>66%</td><td>66%</td><td>65%</td><td>51%</td></tr>
 </table>
-
-Chrome > T5 = phoneGap = 原生浏览器
 
 ## [Acid3检测](http://acid3.acidtests.org)
 <table>
@@ -40,42 +36,36 @@ Chrome > T5 = phoneGap = 原生浏览器
     <tr><td>T5</td><td>100(满分)</td><td>100(满分)</td><td>100(满分)</td><td>-</td></tr>
 </table>
 
-T5 = phoneGap = 原生浏览器 = Chrome Beta
-
-
 ## [Canvas Performance Test(fps越大，性能越好)](http://www.smashcat.org/av/canvas_test/)
 
 <table>
     <tr><th>机型</th><th>SAMSUNG GT-S7562i</th><th>魅族MX M031</th><th>Google Nexus 7(二代)</th><th>iPad 2</th></tr>
-    <tr><td>T5</td><td>13fps</td></tr>
-    <tr><td>phoneGap</td><td>3fps</td></tr>
-    <tr><td>原生浏览器</td><td>3~4fps</td></tr>
-    <tr><td>Chrome Beta</td><td>8fps</td></tr>
+    <tr><td>T5</td><td>13fps</td><td>16fps</td><td>96fps</td><td>-</td></tr>
+    <tr><td>phoneGap</td><td>3fps</td><td>14fps</td><td>22fps</td><td>-</td></tr>
+    <tr><td>原生浏览器</td><td>3~4fps</td><td>15fps</td><td>23fps</td><td>40fps</td></tr>
+    <tr><td>Chrome Beta</td><td>8fps</td><td>50fps</td><td>38fps</td><td>33fps</td></tr>
 </table>
-
-T5 > Chrome Beta > 原生浏览器 > phoneGap
 
 ## [CSS3 Layout Performance Test(值越小，css3布局性能越强)](http://ie.microsoft.com/testdrive/performance/mazesolver)
 
 <table>
-    <tr><td>T5</td><td>110s</td></tr>
-    <tr><td>phoneGap</td><td>294s</td></tr>
-    <tr><td>原生浏览器</td><td>330s</td></tr>
-    <tr><td>Chrome Beta</td><td>178s</td></tr>
+    <tr><th>机型</th><th>SAMSUNG GT-S7562i</th><th>魅族MX M031</th><th>Google Nexus 7(二代)</th><th>iPad 2</th></tr>
+    <tr><td>T5</td><td>110s</td><td>57s</td><td>71s</td><td>85s</td><td>-</td></tr>
+    <tr><td>phoneGap</td><td>294s</td><td>80s</td><td>27s</td><td>-</td></tr>
+    <tr><td>原生浏览器</td><td>330s</td><td>88s</td><td>24s</td><td>37s</td></tr>
+    <tr><td>Chrome Beta</td><td>178s</td><td>192s</td><td>85s</td><td>45s</td></tr>
 </table>
-
-T5 > Chrome Beta > phoneGap > 原生浏览器
 
 
 ## [V8 Benchmark(数值越大，得分越高)](http://octane-benchmark.googlecode.com/svn/latest/index.html)
 <table>
-    <tr><td>T5</td><td>796</td></tr>
-    <tr><td>phoneGap</td><td>695</td></tr>
-    <tr><td>原生浏览器</td><td>705</td></tr>
-    <tr><td>Chrome Beta</td><td>651</td></tr>
+    <tr><th>机型</th><th>SAMSUNG GT-S7562i</th><th>魅族MX M031</th><th>Google Nexus 7(二代)</th><th>iPad 2</th></tr>
+    <tr><td>T5</td><td>796</td><td>1357</td><td>1768</td><td>-</td></tr>
+    <tr><td>phoneGap</td><td>695</td><td>1191</td><td>1564</td><td>-</td></tr>
+    <tr><td>原生浏览器</td><td>705</td><td>1190</td><td>1517</td><td>559</td></tr>
+    <tr><td>Chrome Beta</td><td>651</td><td>1797</td><td>2251</td><td>183</td></tr>
 </table>
 
-T5 > 原生浏览器 > phoneGap > Chrome Beta
 
 ## [Javascript Raytracer(Basic Render)(值越小，javascript计算能力越强)](http://nontroppo.org/timer/progressive_raytracer.html)
 
@@ -87,18 +77,16 @@ T5 > 原生浏览器 > phoneGap > Chrome Beta
     <tr><td>Chrome Beta</td><td>12.035s</td><td>31.782s</td><td>57.851s</td></tr>
 </table>
 
-T5 > Chrome Beta > phoneGap > 原生浏览器
 
 ## [Mesh Transform Benchmark(值越小，javascript计算能力越强)](http://www.webkit.org/misc/morph.html)
 
 <table>
-    <tr><td>T5</td><td>161ms</td></tr>
-    <tr><td>phoneGap</td><td>377ms</td></tr>
-    <tr><td>原生浏览器</td><td>390ms</td></tr>
-    <tr><td>Chrome Beta</td><td>178ms</td></tr>
+    <tr><th>机型</th><th>SAMSUNG GT-S7562i</th><th>魅族MX M031</th><th>Google Nexus 7(二代)</th><th>iPad 2</th></tr>
+    <tr><td>T5</td><td>161ms</td><td>105ms</td><td>87ms</td><td>-</td></tr>
+    <tr><td>phoneGap</td><td>377ms</td><td>242ms</td><td>164ms</td><td>-</td></tr>
+    <tr><td>原生浏览器</td><td>390ms</td><td>243ms</td><td>159ms</td><td>210ms</td></tr>
+    <tr><td>Chrome Beta</td><td>178ms</td><td>101ms</td><td>92ms</td><td>1099ms</td></tr>
 </table>
 
-T5 > Chrome Beta > phoneGap > 原生浏览器
 
 
-以上测试，除了css3选择器 T5内核比phoneGap和原生浏览器略差以外，其他测试项全部优于phoneGap和原生浏览器。
