@@ -1,5 +1,14 @@
 # T5与phoneGap对比
 
+本次对比主要包括‘标准支持’、‘CSS渲染和js执行性能’两个方面，以3个不同配置的Android机器作为测试平台，并用iPad 2作为参照。
+
+标准支持部分主要看测试目标对HTML5、CSS3的支持程度以及V8 Benchmark的评分；
+CSS渲染和js执行性能部分主要看测试目标的CSS渲染能力，Canvas性能，Javascript执行能力，DOM操作能力。
+
+根据各项测试数据，可以得出如下几个结论：
+* 在低配置机器上T5的性能远高于phoneGap（原生内核）
+* 随着机器配置的提升，T5相对于phoneGap（原生内核）的优势逐步减少
+
 ## 测试环境
 <table>
     <tr><th>机型</th><th>SAMSUNG GT-S7562i</th><th>魅族MX M031</th><th>Google Nexus 7(二代)</th><th>iPad 2</th></tr>
