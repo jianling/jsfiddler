@@ -88,5 +88,38 @@
     <tr><td>Chrome Beta</td><td>178ms</td><td>101ms</td><td>92ms</td><td>1099ms</td></tr>
 </table>
 
+## [Setting and getting DOM node attributes.](http://dromaeo.com/?dom)
 
+<table>
+    <tr><th>机型</th><th>SAMSUNG GT-S7562i</th><th>魅族MX M031</th><th>Google Nexus 7(二代)</th><th>iPad 2</th></tr>
+    <tr><td>T5</td><td>49.18runs/s</td><td>78.96runs/s</td><td>108.57runs/s</td><td>-</td></tr>
+    <tr><td>phoneGap</td><td>34.28runs/s</td><td>41.89runs/s</td><td>52.10runs/s</td><td>-</td></tr>
+    <tr><td>Chrome Beta</td><td>51.64runs/s</td><td>82.11runs/s</td><td>142.37runs/s</td><td>-</td></tr>
+</table>
 
+## [Creating and injecting DOM nodes into a document.](http://dromaeo.com/?dom)
+
+<table>
+    <tr><th>机型</th><th>SAMSUNG GT-S7562i</th><th>魅族MX M031</th><th>Google Nexus 7(二代)</th><th>iPad 2</th></tr>
+    <tr><td>T5</td><td>24.08runs/s</td><td>40.29runs/s</td><td>50.10runs/s</td><td>-</td></tr>
+    <tr><td>phoneGap</td><td>23.78runs/s</td><td>40.05runs/s</td><td>51.06runs/s</td><td>-</td></tr>
+    <tr><td>Chrome Beta</td><td>30.82runs/s</td><td>40.94runs/s</td><td>56.34runs/s</td><td>-</td></tr>
+</table>
+
+## [Querying DOM elements in a document.](http://dromaeo.com/?dom)
+
+<table>
+    <tr><th>机型</th><th>SAMSUNG GT-S7562i</th><th>魅族MX M031</th><th>Google Nexus 7(二代)</th><th>iPad 2</th></tr>
+    <tr><td>T5</td><td>788.17runs/s</td><td>1211.18runs/s</td><td>1417.73runs/s</td><td>-</td></tr>
+    <tr><td>phoneGap</td><td>633.75runs/s</td><td>1147.76runs/s</td><td>1239.26runs/s</td><td>-</td></tr>
+    <tr><td>Chrome Beta</td><td>968.59runs/s</td><td>1491.35runs/s</td><td>2672.16runs/s</td><td>-</td></tr>
+</table>
+
+## [Traversing a DOM structure.](http://dromaeo.com/?dom)
+
+<table>
+    <tr><th>机型</th><th>SAMSUNG GT-S7562i</th><th>魅族MX M031</th><th>Google Nexus 7(二代)</th><th>iPad 2</th></tr>
+    <tr><td>T5</td><td>25.29runs/s</td><td>49.10runs/s</td><td>53.90runs/s</td><td>-</td></tr>
+    <tr><td>phoneGap</td><td>23.62runs/s</td><td>48.56runs/s</td><td>47.72runs/s</td><td>-</td></tr>
+    <tr><td>Chrome Beta</td><td>31.37runs/s</td><td>44.72runs/s</td><td>71.09runs/s</td><td>-</td></tr>
+</table>
