@@ -11,7 +11,9 @@ CSS渲染和js执行性能部分主要看测试目标的CSS渲染能力，Canvas
 * 在低配置机器上T5的CSS渲染能力、Canvas性能和Javascript计算能力远高于phoneGap（原生webView）和Chrome Beta
 * 随着机器配置的提升，T5相对于phoneGap（原生webView）的优势逐步降低
 * 在任何机型（指本次测试使用的三种不同配置的机型）上，T5对于DOM的操作能力都低于Chrome Beta
-* 在高配置的机器上，T5对于DOM的操作能力会稍微高于iPad 2上的Chrome（）
+* 在高配置的机器上，T5对于DOM的操作能力会稍微高于iPad 2上的Chrome（IOS上的Chrome内核性能低于系统自带的Safafi）
+
+另外在Google Nexus 7(二代)上的T5中运行tieba WebAPP版，运行和操作都比较流畅，体验与Chrome相当。
 
 ## 测试环境
 <table>
