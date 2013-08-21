@@ -6,8 +6,12 @@
 CSS渲染和js执行性能部分主要看测试目标的CSS渲染能力，Canvas性能，Javascript执行能力，DOM操作能力。
 
 根据各项测试数据，可以得出如下几个结论：
-* 在低配置机器上T5的性能远高于phoneGap（原生内核）
-* 随着机器配置的提升，T5相对于phoneGap（原生内核）的优势逐步减少
+* phoneGap中的webView应该就是原生的webView，没有做优化，只是进行了扩展和封装
+* T5对HTML5的支持高于phoneGap（原生webView），但是对CSS3的支持与phoneGap（原生webView）相同且低于Chrome Beta
+* 在低配置机器上T5的CSS渲染能力、Canvas性能和Javascript计算能力远高于phoneGap（原生webView）和Chrome Beta
+* 随着机器配置的提升，T5相对于phoneGap（原生webView）的优势逐步降低
+* 在任何机型（指本次测试使用的三种不同配置的机型）上，T5对于DOM的操作能力都低于Chrome Beta
+* 在高配置的机器上，T5对于DOM的操作能力会稍微高于iPad 2上的Chrome（）
 
 ## 测试环境
 <table>
@@ -45,6 +49,15 @@ CSS渲染和js执行性能部分主要看测试目标的CSS渲染能力，Canvas
     <tr><td>T5</td><td>100(满分)</td><td>100(满分)</td><td>100(满分)</td><td>100(满分)</td></tr>
 </table>
 
+## [V8 Benchmark(数值越大，得分越高)](http://octane-benchmark.googlecode.com/svn/latest/index.html)
+<table>
+    <tr><th>机型</th><th>SAMSUNG GT-S7562i</th><th>魅族MX M031</th><th>Google Nexus 7(二代)</th><th>iPad 2</th></tr>
+    <tr><td>T5</td><td>796</td><td>1357</td><td>1768</td><td>-</td></tr>
+    <tr><td>phoneGap</td><td>695</td><td>1191</td><td>1564</td><td>-</td></tr>
+    <tr><td>原生浏览器</td><td>705</td><td>1190</td><td>1517</td><td>559</td></tr>
+    <tr><td>Chrome (Beta)</td><td>651</td><td>1797</td><td>2251</td><td>183</td></tr>
+</table>
+
 ## [Canvas Performance Test(fps越大，性能越好)](http://www.smashcat.org/av/canvas_test/)
 
 <table>
@@ -65,17 +78,6 @@ CSS渲染和js执行性能部分主要看测试目标的CSS渲染能力，Canvas
     <tr><td>Chrome (Beta)</td><td>178s</td><td>192s</td><td>85s</td><td>45s</td></tr>
 </table>
 
-
-## [V8 Benchmark(数值越大，得分越高)](http://octane-benchmark.googlecode.com/svn/latest/index.html)
-<table>
-    <tr><th>机型</th><th>SAMSUNG GT-S7562i</th><th>魅族MX M031</th><th>Google Nexus 7(二代)</th><th>iPad 2</th></tr>
-    <tr><td>T5</td><td>796</td><td>1357</td><td>1768</td><td>-</td></tr>
-    <tr><td>phoneGap</td><td>695</td><td>1191</td><td>1564</td><td>-</td></tr>
-    <tr><td>原生浏览器</td><td>705</td><td>1190</td><td>1517</td><td>559</td></tr>
-    <tr><td>Chrome (Beta)</td><td>651</td><td>1797</td><td>2251</td><td>183</td></tr>
-</table>
-
-
 ## [Javascript Raytracer(Basic Render)(值越小，javascript计算能力越强)](http://nontroppo.org/timer/progressive_raytracer.html)
 
 <table>
@@ -84,17 +86,6 @@ CSS渲染和js执行性能部分主要看测试目标的CSS渲染能力，Canvas
     <tr><td>phoneGap</td><td>13.869s 41.68s 65.898s</td><td>5.213s 12.392s 19.66s</td><td>3.306s 8.167s 12.778s</td><td>-</td></tr>
     <tr><td>原生浏览器</td><td>15.308s 48.905s 73.793s</td><td>5.483s 13.39s 21.884s</td><td>3.31s 7.973s 12.844s</td><td>2.544s 8.124s 14.31s</td></tr>
     <tr><td>Chrome (Beta)</td><td>12.035s 31.782s 57.851s</td><td>11.026s 35.22s 58.043s</td><td>5.939s 17.989s 30.297s</td><td>2.843s 8.476s 14.619s</td></tr>
-</table>
-
-
-## [Mesh Transform Benchmark(值越小，javascript计算能力越强)](http://www.webkit.org/misc/morph.html)
-
-<table>
-    <tr><th>机型</th><th>SAMSUNG GT-S7562i</th><th>魅族MX M031</th><th>Google Nexus 7(二代)</th><th>iPad 2</th></tr>
-    <tr><td>T5</td><td>161ms</td><td>105ms</td><td>87ms</td><td>-</td></tr>
-    <tr><td>phoneGap</td><td>377ms</td><td>242ms</td><td>164ms</td><td>-</td></tr>
-    <tr><td>原生浏览器</td><td>390ms</td><td>243ms</td><td>159ms</td><td>210ms</td></tr>
-    <tr><td>Chrome (Beta)</td><td>178ms</td><td>101ms</td><td>92ms</td><td>1099ms</td></tr>
 </table>
 
 ## [Setting and getting DOM node attributes.](http://dromaeo.com/?dom)
