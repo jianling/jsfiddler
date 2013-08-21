@@ -15,6 +15,11 @@ CSS渲染和js执行性能部分主要看测试目标的CSS渲染能力，Canvas
 
 另外在Google Nexus 7(二代)上的T5中运行tieba WebAPP版，运行和操作都比较流畅，体验与Chrome相当。
 
+
+<br /><br /><br />
+
+
+附上测试数据：
 ## 测试环境
 <table>
     <tr><th>机型</th><th>SAMSUNG GT-S7562i</th><th>魅族MX M031</th><th>Google Nexus 7(二代)</th><th>iPad 2</th></tr>
