@@ -32,8 +32,8 @@
     <tr><th>机型</th><th>SAMSUNG GT-S7562i</th><th>魅族MX M031</th><th>Google Nexus 7(二代)</th><th>iPad 2</th></tr>
     <tr><td>T5</td><td>100(满分)</td><td>100(满分)</td><td>100(满分)</td><td>-</td></tr>
     <tr><td>phoneGap</td><td>100(满分)</td><td>100(满分)</td><td>100(满分)</td><td>-</td></tr>
-    <tr><td>T5</td><td>100(满分)</td><td>100(满分)</td><td>100(满分)</td><td>-</td></tr>
-    <tr><td>T5</td><td>100(满分)</td><td>100(满分)</td><td>100(满分)</td><td>-</td></tr>
+    <tr><td>T5</td><td>100(满分)</td><td>100(满分)</td><td>100(满分)</td><td>100(满分)</td></tr>
+    <tr><td>T5</td><td>100(满分)</td><td>100(满分)</td><td>100(满分)</td><td>100(满分)</td></tr>
 </table>
 
 ## [Canvas Performance Test(fps越大，性能越好)](http://www.smashcat.org/av/canvas_test/)
@@ -50,7 +50,7 @@
 
 <table>
     <tr><th>机型</th><th>SAMSUNG GT-S7562i</th><th>魅族MX M031</th><th>Google Nexus 7(二代)</th><th>iPad 2</th></tr>
-    <tr><td>T5</td><td>110s</td><td>57s</td><td>71s</td><td>85s</td><td>-</td></tr>
+    <tr><td>T5</td><td>110s</td><td>57s</td><td>71s</td><td>-</td></tr>
     <tr><td>phoneGap</td><td>294s</td><td>80s</td><td>27s</td><td>-</td></tr>
     <tr><td>原生浏览器</td><td>330s</td><td>88s</td><td>24s</td><td>37s</td></tr>
     <tr><td>Chrome Beta</td><td>178s</td><td>192s</td><td>85s</td><td>45s</td></tr>
@@ -70,11 +70,11 @@
 ## [Javascript Raytracer(Basic Render)(值越小，javascript计算能力越强)](http://nontroppo.org/timer/progressive_raytracer.html)
 
 <table>
-    <tr><th>测试目标</th><th>第一次</th><th>第二次</th><th>第三次</th></tr>
-    <tr><td>T5</td><td>4.508s</td><td>11.778s</td><td>19.275s</td></tr>
-    <tr><td>phoneGap</td><td>13.869s</td><td>41.68s</td><td>65.898s</td></tr>
-    <tr><td>原生浏览器</td><td>15.308s</td><td>48.905s</td><td>73.793s</td></tr>
-    <tr><td>Chrome Beta</td><td>12.035s</td><td>31.782s</td><td>57.851s</td></tr>
+    <tr><th>机型</th><th>SAMSUNG GT-S7562i</th><th>魅族MX M031</th><th>Google Nexus 7(二代)</th><th>iPad 2</th></tr>
+    <tr><td>T5</td><td>4.508s 11.778s 19.275s</td><td>3.05s 7.687s 12.947s</td><td>4.987s 11.647s 18.633s</td><td>-</td></tr>
+    <tr><td>phoneGap</td><td>13.869s 41.68s 65.898s</td><td>5.213s 12.392s 19.66s</td><td>3.306s 8.167s 12.778s</td><td>-</td></tr>
+    <tr><td>原生浏览器</td><td>15.308s 48.905s 73.793s</td><td>5.483s 13.39s 21.884s</td><td>3.31s 7.973s 12.844s</td><td>2.544s 8.124s 14.31s</td></tr>
+    <tr><td>Chrome Beta</td><td>12.035s 31.782s 57.851s</td><td>11.026s 35.22s 58.043s</td><td>5.939s 17.989s 30.297s</td><td>2.843s 8.476s 14.619s</td></tr>
 </table>
 
 
