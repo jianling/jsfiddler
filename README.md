@@ -11,56 +11,42 @@
 
 ## [HTML5支持性检测](http://html5test.com)
 <table>
-    <tr><td>T5</td><td>470/500</td></tr>
-    <tr><td>phoneGap</td><td>416/500</td></tr>
-    <tr><td>原生浏览器</td><td>431/500</td></tr>
-    <tr><td>Chrome Beta</td><td>429/500</td></tr>
+    <tr><th>机型</th><th>SAMSUNG GT-S7562i</th><th>魅族MX M031</th><th>Google Nexus 7(二代)</th><th>iPad 2</th></tr>
+    <tr><td>T5</td><td>470/500</td><td>470/500</td><td>470/500</td><td>-</td></tr>
+    <tr><td>phoneGap</td><td>416/500</td><td>298/500</td><td>298/500</td><td>-</td></tr>
+    <tr><td>原生浏览器</td><td>431/500</td><td>298/500</td><td>298/500</td><td>344/500</td></tr>
+    <tr><td>Chrome Beta</td><td>429/500</td><td>429/500</td><td>410/500</td><td>344/500</td></tr>
 </table>
 
 T5 > 原生浏览器 > Chrome Beta > phoneGap
 
 ## [CSS3支持性检测](http://css3test.com)
 <table>
-    <tr><td>T5</td><td>49%</td></tr>
-    <tr><td>phoneGap</td><td>49%</td></tr>
-    <tr><td>原生浏览器</td><td>49%</td></tr>
-    <tr><td>Chrome Beta</td><td>66%</td></tr>
+    <tr><th>机型</th><th>SAMSUNG GT-S7562i</th><th>魅族MX M031</th><th>Google Nexus 7(二代)</th><th>iPad 2</th></tr>
+    <tr><td>T5</td><td>49%</td><td>48%</td><td>48%</td><td>-</td></tr>
+    <tr><td>phoneGap</td><td>49%</td><td>48%</td><td>48%</td><td>-</td></tr>
+    <tr><td>原生浏览器</td><td>49%</td><td>48%</td><td>48%</td><td>51%</td></tr>
+    <tr><td>Chrome Beta</td><td>66%</td><td>66%</td><td>65%</td><td>51%</td></tr>
 </table>
 
 Chrome > T5 = phoneGap = 原生浏览器
 
-## [CSS3选择器支持性检测](http://tools.css3.info/selectors-test/test.html)
-<table>
-    <tr><td>T5</td><td>558/574</td></tr>
-    <tr><td>phoneGap</td><td>574/574</td></tr>
-    <tr><td>原生浏览器</td><td>574/574</td></tr>
-    <tr><td>Chrome Beta</td><td>574/574</td></tr>
-</table>
-
-T5 < phoneGap = 原生浏览器 = Chrome Beta
-
 ## [Acid3检测](http://acid3.acidtests.org)
 <table>
-    <tr><td>T5</td><td>100(满分)</td></tr>
-    <tr><td>phoneGap</td><td>100(满分)</td></tr>
-    <tr><td>原生浏览器</td><td>100(满分)</td></tr>
-    <tr><td>Chrome Beta</td><td>100(满分)</td></tr>
+    <tr><th>机型</th><th>SAMSUNG GT-S7562i</th><th>魅族MX M031</th><th>Google Nexus 7(二代)</th><th>iPad 2</th></tr>
+    <tr><td>T5</td><td>100(满分)</td><td>100(满分)</td><td>100(满分)</td><td>-</td></tr>
+    <tr><td>phoneGap</td><td>100(满分)</td><td>100(满分)</td><td>100(满分)</td><td>-</td></tr>
+    <tr><td>T5</td><td>100(满分)</td><td>100(满分)</td><td>100(满分)</td><td>-</td></tr>
+    <tr><td>T5</td><td>100(满分)</td><td>100(满分)</td><td>100(满分)</td><td>-</td></tr>
 </table>
 
 T5 = phoneGap = 原生浏览器 = Chrome Beta
 
-## [JavaScript符合性检测](http://test262.ecmascript.org/default.html)
-<table>
-    <tr><td>T5</td><td>Pase:11561 Fail:17</td></tr>
-    <tr><td>phoneGap</td><td>Pase:11553 Fail:25</td></tr>
-    <tr><td>原生浏览器</td><td>Pase:11553 Fail:25</td></tr>
-</table>
-
-T5 > phoneGap = 原生浏览器
 
 ## [Canvas Performance Test(fps越大，性能越好)](http://www.smashcat.org/av/canvas_test/)
 
 <table>
+    <tr><th>机型</th><th>SAMSUNG GT-S7562i</th><th>魅族MX M031</th><th>Google Nexus 7(二代)</th><th>iPad 2</th></tr>
     <tr><td>T5</td><td>13fps</td></tr>
     <tr><td>phoneGap</td><td>3fps</td></tr>
     <tr><td>原生浏览器</td><td>3~4fps</td></tr>
