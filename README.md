@@ -15,7 +15,7 @@
     <tr><td>T5</td><td>470/500</td><td>470/500</td><td>470/500</td><td>-</td></tr>
     <tr><td>phoneGap</td><td>416/500</td><td>298/500</td><td>298/500</td><td>-</td></tr>
     <tr><td>原生浏览器</td><td>431/500</td><td>298/500</td><td>298/500</td><td>344/500</td></tr>
-    <tr><td>Chrome Beta</td><td>429/500</td><td>429/500</td><td>410/500</td><td>344/500</td></tr>
+    <tr><td>Chrome (Beta)</td><td>429/500</td><td>429/500</td><td>410/500</td><td>344/500</td></tr>
 </table>
 
 ## [CSS3支持性检测](http://css3test.com)
@@ -24,7 +24,7 @@
     <tr><td>T5</td><td>49%</td><td>48%</td><td>48%</td><td>-</td></tr>
     <tr><td>phoneGap</td><td>49%</td><td>48%</td><td>48%</td><td>-</td></tr>
     <tr><td>原生浏览器</td><td>49%</td><td>48%</td><td>48%</td><td>51%</td></tr>
-    <tr><td>Chrome Beta</td><td>66%</td><td>66%</td><td>65%</td><td>51%</td></tr>
+    <tr><td>Chrome (Beta)</td><td>66%</td><td>66%</td><td>65%</td><td>51%</td></tr>
 </table>
 
 ## [Acid3检测](http://acid3.acidtests.org)
@@ -43,7 +43,7 @@
     <tr><td>T5</td><td>13fps</td><td>16fps</td><td>96fps</td><td>-</td></tr>
     <tr><td>phoneGap</td><td>3fps</td><td>14fps</td><td>22fps</td><td>-</td></tr>
     <tr><td>原生浏览器</td><td>3~4fps</td><td>15fps</td><td>23fps</td><td>40fps</td></tr>
-    <tr><td>Chrome Beta</td><td>8fps</td><td>50fps</td><td>38fps</td><td>33fps</td></tr>
+    <tr><td>Chrome (Beta)</td><td>8fps</td><td>50fps</td><td>38fps</td><td>33fps</td></tr>
 </table>
 
 ## [CSS3 Layout Performance Test(值越小，css3布局性能越强)](http://ie.microsoft.com/testdrive/performance/mazesolver)
@@ -53,7 +53,7 @@
     <tr><td>T5</td><td>110s</td><td>57s</td><td>71s</td><td>-</td></tr>
     <tr><td>phoneGap</td><td>294s</td><td>80s</td><td>27s</td><td>-</td></tr>
     <tr><td>原生浏览器</td><td>330s</td><td>88s</td><td>24s</td><td>37s</td></tr>
-    <tr><td>Chrome Beta</td><td>178s</td><td>192s</td><td>85s</td><td>45s</td></tr>
+    <tr><td>Chrome (Beta)</td><td>178s</td><td>192s</td><td>85s</td><td>45s</td></tr>
 </table>
 
 
@@ -63,7 +63,7 @@
     <tr><td>T5</td><td>796</td><td>1357</td><td>1768</td><td>-</td></tr>
     <tr><td>phoneGap</td><td>695</td><td>1191</td><td>1564</td><td>-</td></tr>
     <tr><td>原生浏览器</td><td>705</td><td>1190</td><td>1517</td><td>559</td></tr>
-    <tr><td>Chrome Beta</td><td>651</td><td>1797</td><td>2251</td><td>183</td></tr>
+    <tr><td>Chrome (Beta)</td><td>651</td><td>1797</td><td>2251</td><td>183</td></tr>
 </table>
 
 
@@ -74,7 +74,7 @@
     <tr><td>T5</td><td>4.508s 11.778s 19.275s</td><td>3.05s 7.687s 12.947s</td><td>4.987s 11.647s 18.633s</td><td>-</td></tr>
     <tr><td>phoneGap</td><td>13.869s 41.68s 65.898s</td><td>5.213s 12.392s 19.66s</td><td>3.306s 8.167s 12.778s</td><td>-</td></tr>
     <tr><td>原生浏览器</td><td>15.308s 48.905s 73.793s</td><td>5.483s 13.39s 21.884s</td><td>3.31s 7.973s 12.844s</td><td>2.544s 8.124s 14.31s</td></tr>
-    <tr><td>Chrome Beta</td><td>12.035s 31.782s 57.851s</td><td>11.026s 35.22s 58.043s</td><td>5.939s 17.989s 30.297s</td><td>2.843s 8.476s 14.619s</td></tr>
+    <tr><td>Chrome (Beta)</td><td>12.035s 31.782s 57.851s</td><td>11.026s 35.22s 58.043s</td><td>5.939s 17.989s 30.297s</td><td>2.843s 8.476s 14.619s</td></tr>
 </table>
 
 
@@ -85,7 +85,7 @@
     <tr><td>T5</td><td>161ms</td><td>105ms</td><td>87ms</td><td>-</td></tr>
     <tr><td>phoneGap</td><td>377ms</td><td>242ms</td><td>164ms</td><td>-</td></tr>
     <tr><td>原生浏览器</td><td>390ms</td><td>243ms</td><td>159ms</td><td>210ms</td></tr>
-    <tr><td>Chrome Beta</td><td>178ms</td><td>101ms</td><td>92ms</td><td>1099ms</td></tr>
+    <tr><td>Chrome (Beta)</td><td>178ms</td><td>101ms</td><td>92ms</td><td>1099ms</td></tr>
 </table>
 
 ## [Setting and getting DOM node attributes.](http://dromaeo.com/?dom)
@@ -94,7 +94,7 @@
     <tr><th>机型</th><th>SAMSUNG GT-S7562i</th><th>魅族MX M031</th><th>Google Nexus 7(二代)</th><th>iPad 2</th></tr>
     <tr><td>T5</td><td>49.18runs/s</td><td>78.96runs/s</td><td>108.57runs/s</td><td>-</td></tr>
     <tr><td>phoneGap</td><td>34.28runs/s</td><td>41.89runs/s</td><td>52.10runs/s</td><td>-</td></tr>
-    <tr><td>Chrome Beta</td><td>51.64runs/s</td><td>82.11runs/s</td><td>142.37runs/s</td><td>-</td></tr>
+    <tr><td>Chrome (Beta)</td><td>51.64runs/s</td><td>82.11runs/s</td><td>142.37runs/s</td><td>-</td></tr>
 </table>
 
 ## [Creating and injecting DOM nodes into a document.](http://dromaeo.com/?dom)
@@ -103,7 +103,7 @@
     <tr><th>机型</th><th>SAMSUNG GT-S7562i</th><th>魅族MX M031</th><th>Google Nexus 7(二代)</th><th>iPad 2</th></tr>
     <tr><td>T5</td><td>24.08runs/s</td><td>40.29runs/s</td><td>50.10runs/s</td><td>-</td></tr>
     <tr><td>phoneGap</td><td>23.78runs/s</td><td>40.05runs/s</td><td>51.06runs/s</td><td>-</td></tr>
-    <tr><td>Chrome Beta</td><td>30.82runs/s</td><td>40.94runs/s</td><td>56.34runs/s</td><td>-</td></tr>
+    <tr><td>Chrome (Beta)</td><td>30.82runs/s</td><td>40.94runs/s</td><td>56.34runs/s</td><td>-</td></tr>
 </table>
 
 ## [Querying DOM elements in a document.](http://dromaeo.com/?dom)
@@ -112,7 +112,7 @@
     <tr><th>机型</th><th>SAMSUNG GT-S7562i</th><th>魅族MX M031</th><th>Google Nexus 7(二代)</th><th>iPad 2</th></tr>
     <tr><td>T5</td><td>788.17runs/s</td><td>1211.18runs/s</td><td>1417.73runs/s</td><td>-</td></tr>
     <tr><td>phoneGap</td><td>633.75runs/s</td><td>1147.76runs/s</td><td>1239.26runs/s</td><td>-</td></tr>
-    <tr><td>Chrome Beta</td><td>968.59runs/s</td><td>1491.35runs/s</td><td>2672.16runs/s</td><td>-</td></tr>
+    <tr><td>Chrome (Beta)</td><td>968.59runs/s</td><td>1491.35runs/s</td><td>2672.16runs/s</td><td>-</td></tr>
 </table>
 
 ## [Traversing a DOM structure.](http://dromaeo.com/?dom)
@@ -121,5 +121,5 @@
     <tr><th>机型</th><th>SAMSUNG GT-S7562i</th><th>魅族MX M031</th><th>Google Nexus 7(二代)</th><th>iPad 2</th></tr>
     <tr><td>T5</td><td>25.29runs/s</td><td>49.10runs/s</td><td>53.90runs/s</td><td>-</td></tr>
     <tr><td>phoneGap</td><td>23.62runs/s</td><td>48.56runs/s</td><td>47.72runs/s</td><td>-</td></tr>
-    <tr><td>Chrome Beta</td><td>31.37runs/s</td><td>44.72runs/s</td><td>71.09runs/s</td><td>-</td></tr>
+    <tr><td>Chrome (Beta)</td><td>31.37runs/s</td><td>44.72runs/s</td><td>71.09runs/s</td><td>-</td></tr>
 </table>
