@@ -2,8 +2,11 @@
 
 ## 测试环境
 <table>
-    <tr><td>机型</td><td>SAMSUNG GT-S7562i</td></tr>
-    <tr><td>系统</td><td>Andriod 4.0.4</td></tr>
+    <tr><th>机型</th><th>SAMSUNG GT-S7562i</th><th>魅族MX M031</th><th>Google Nexus 7(二代)</th><th>iPad 2</th></tr>
+    <tr><td>系统</td><td>Andriod 4.0.4</td><td>Andriod 4.1.1</td><td>Andriod 4.3</td><td>IOS 5.1</td></tr>
+    <tr><td>处理器主频</td><td>1GHz</td><td>1.5GHz</td><td>1.5GHz</td><td>1GHz</td></tr>
+    <tr><td>处理器核心数</td><td>单核心</td><td>双核心</td><td>四核心</td><td>双核心</td></tr>
+    <tr><td>系统内存</td><td>768MB</td><td>1GB</td><td>2GB</td><td>512MB</td></tr>
 </table>
 
 ## [HTML5支持性检测](http://html5test.com)
