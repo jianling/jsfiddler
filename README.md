@@ -52,8 +52,8 @@ CSS渲染和js执行性能部分主要看测试目标的CSS渲染能力，Canvas
     <tr><th>机型</th><th>SAMSUNG GT-S7562i</th><th>魅族MX M031</th><th>Google Nexus 7(二代)</th><th>iPad 2</th></tr>
     <tr><td>T5</td><td>100(满分)</td><td>100(满分)</td><td>100(满分)</td><td>-</td></tr>
     <tr><td>phoneGap</td><td>100(满分)</td><td>100(满分)</td><td>100(满分)</td><td>-</td></tr>
-    <tr><td>T5</td><td>100(满分)</td><td>100(满分)</td><td>100(满分)</td><td>100(满分)</td></tr>
-    <tr><td>T5</td><td>100(满分)</td><td>100(满分)</td><td>100(满分)</td><td>100(满分)</td></tr>
+    <tr><td>原生浏览器</td><td>100(满分)</td><td>100(满分)</td><td>100(满分)</td><td>100(满分)</td></tr>
+    <tr><td>Chrome (Beta)</td><td>100(满分)</td><td>100(满分)</td><td>100(满分)</td><td>100(满分)</td></tr>
 </table>
 
 ## [V8 Benchmark(数值越大，得分越高)](http://octane-benchmark.googlecode.com/svn/latest/index.html)
