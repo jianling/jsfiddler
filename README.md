@@ -13,9 +13,9 @@ CSS渲染和js执行性能部分主要看测试目标的CSS渲染能力，Canvas
 * 在任何机型（指本次测试使用的三种不同配置的机型）上，T5对于DOM的操作能力都低于Chrome Beta
 * 在高配置的机器上，T5对于DOM的操作能力会稍微高于iPad 2上的Chrome（IOS上的Chrome内核性能低于系统自带的Safafi）
 
-另外在Google Nexus 7(二代)上的T5中运行tieba WebAPP版，运行和操作都比较流畅，体验与Chrome相当。
+另外在各个设备上运行http://fex.baidu.com上的案例，对于简单的Demo，在T5跟phoneGap上操作体验相差不大，稍微复杂的Demo，T5相对稍微流畅一点。
 
-
+注：从Andriod 4.3开始原来的默认浏览器已经改成Chrome，但是webView依然是原来的内核。
 <br /><br /><br />
 
 
@@ -101,7 +101,7 @@ CSS渲染和js执行性能部分主要看测试目标的CSS渲染能力，Canvas
     <tr><th>机型</th><th>SAMSUNG GT-S7562i</th><th>魅族MX M031</th><th>Google Nexus 7(二代)</th><th>iPad 2</th></tr>
     <tr><td>T5</td><td>49.18runs/s</td><td>78.96runs/s</td><td>108.57runs/s</td><td>-</td></tr>
     <tr><td>phoneGap</td><td>34.28runs/s</td><td>41.89runs/s</td><td>52.10runs/s</td><td>-</td></tr>
-    <tr><td>原生浏览器</td><td>40.94runs/s</td><td>40.91runs/s</td><td></td><td>72.77runs/s</td></tr>
+    <tr><td>原生浏览器</td><td>40.94runs/s</td><td>40.91runs/s</td><td>-</td><td>72.77runs/s</td></tr>
     <tr><td>Chrome (Beta)</td><td>51.64runs/s</td><td>82.11runs/s</td><td>142.37runs/s</td><td>52.68runs/s</td></tr>
 </table>
 
@@ -111,7 +111,7 @@ CSS渲染和js执行性能部分主要看测试目标的CSS渲染能力，Canvas
     <tr><th>机型</th><th>SAMSUNG GT-S7562i</th><th>魅族MX M031</th><th>Google Nexus 7(二代)</th><th>iPad 2</th></tr>
     <tr><td>T5</td><td>24.08runs/s</td><td>40.29runs/s</td><td>50.10runs/s</td><td>-</td></tr>
     <tr><td>phoneGap</td><td>23.78runs/s</td><td>40.05runs/s</td><td>51.06runs/s</td><td>-</td></tr>
-    <tr><td>原生浏览器</td><td>28.53runs/s</td><td>40.56runs/s</td><td></td><td>75.21runs/s</td></tr>
+    <tr><td>原生浏览器</td><td>28.53runs/s</td><td>40.56runs/s</td><td>-</td><td>75.21runs/s</td></tr>
     <tr><td>Chrome (Beta)</td><td>30.82runs/s</td><td>40.94runs/s</td><td>56.34runs/s</td><td>66.53runs/s</td></tr>
 </table>
 
@@ -121,7 +121,7 @@ CSS渲染和js执行性能部分主要看测试目标的CSS渲染能力，Canvas
     <tr><th>机型</th><th>SAMSUNG GT-S7562i</th><th>魅族MX M031</th><th>Google Nexus 7(二代)</th><th>iPad 2</th></tr>
     <tr><td>T5</td><td>788.17runs/s</td><td>1211.18runs/s</td><td>1417.73runs/s</td><td>-</td></tr>
     <tr><td>phoneGap</td><td>633.75runs/s</td><td>1147.76runs/s</td><td>1239.26runs/s</td><td>-</td></tr>
-    <tr><td>原生浏览器</td><td>725.83runs/s</td><td>1114.84runs/s</td><td></td><td>1794.23runs/s</td></tr>
+    <tr><td>原生浏览器</td><td>725.83runs/s</td><td>1114.84runs/s</td><td>-</td><td>1794.23runs/s</td></tr>
     <tr><td>Chrome (Beta)</td><td>968.59runs/s</td><td>1491.35runs/s</td><td>2672.16runs/s</td><td>1330.54runs/s</td></tr>
 </table>
 
@@ -131,6 +131,6 @@ CSS渲染和js执行性能部分主要看测试目标的CSS渲染能力，Canvas
     <tr><th>机型</th><th>SAMSUNG GT-S7562i</th><th>魅族MX M031</th><th>Google Nexus 7(二代)</th><th>iPad 2</th></tr>
     <tr><td>T5</td><td>25.29runs/s</td><td>49.10runs/s</td><td>53.90runs/s</td><td>-</td></tr>
     <tr><td>phoneGap</td><td>23.62runs/s</td><td>48.56runs/s</td><td>47.72runs/s</td><td>-</td></tr>
-    <tr><td>原生浏览器</td><td>28.14runs/s</td><td>47.85runs/s</td><td></td><td>67.36runs/s</td></tr>
+    <tr><td>原生浏览器</td><td>28.14runs/s</td><td>47.85runs/s</td><td>-</td><td>67.36runs/s</td></tr>
     <tr><td>Chrome (Beta)</td><td>31.37runs/s</td><td>44.72runs/s</td><td>71.09runs/s</td><td>38.60runs/s</td></tr>
 </table>
