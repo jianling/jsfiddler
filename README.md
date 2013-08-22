@@ -13,7 +13,7 @@ CSS渲染和js执行性能部分主要看测试目标的CSS渲染能力，Canvas
 * 在任何机型（指本次测试使用的三种不同配置的机型）上，T5对于DOM的操作能力都低于Chrome Beta
 * 在高配置的机器上，T5对于DOM的操作能力会稍微高于iPad 2上的Chrome（IOS上的Chrome内核性能低于系统自带的Safafi）
 
-另外在各个设备上运行http://fex.baidu.com上的案例，对于简单的Demo，在T5跟phoneGap上操作体验相差不大，稍微复杂的Demo，T5相对稍微流畅一点。
+另外在各个设备上运行[http://fex.baidu.com](http://fex.baidu.com)上的案例，对于简单的Demo，在T5跟phoneGap上操作体验相差不大，稍微复杂的Demo，T5相对稍微流畅一点。
 
 注：从Andriod 4.3开始原来的默认浏览器已经改成Chrome，但是webView依然是原来的内核。
 <br /><br /><br />
