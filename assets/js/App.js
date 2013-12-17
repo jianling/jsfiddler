@@ -166,7 +166,7 @@ define(function(require, exports) {
     };
 
     var autoFixIframe = function(){
-        baidu('#J_demoIframe').css('width', baidu(window).width() - 230 - 1);
+        baidu('#J_demoIframe').css('width', baidu('#J_demo').width() - 1);
     };
 
     var prepareSubmit = function(){
