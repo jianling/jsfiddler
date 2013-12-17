@@ -27,7 +27,7 @@ define(function(require, exports) {
         var appURL = 'http://tangram2.offline.bae.baidu.com/jsfiddler';
     }
 
-    if(/localhost/.test(window.location.search)){
+    if(/localhost/.test(window.location.href)){
         var getComponentsURL = './getcomponents.php?';
         var getDemosURL = './getdemos.php?';
         var getDemoURL = './getdemo.php?';
